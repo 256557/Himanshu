@@ -40,3 +40,9 @@ Step 3. One crossover moves between the classes as follows. From M: a c1-c2 or c
 Step 4. This one-crossover matrix has eigenvalues 1, 1/2 and -1/2. With a Poisson number of crossovers of mean m, starting in M: P(M) = 1/3 + (1/2)e^(-m/2) + (1/6)e^(-3m/2). A region of x Morgans has mean m = 2x.
 Step 5. A to B is 0.25 M, so m = 0.5. Given that the pollen is homozygous at A, the strands are in class M at A, so P(homozygous at B) = 1/3 + (1/2)e^(-0.25) + (1/6)e^(-0.75) = 0.333333 + 0.389400 + 0.078728 = 0.801461, about 0.8015.
 Step 6. The centromere distance does not matter for this conditional question, because being homozygous at A already fixes class M at A. Following only the pollen's two chromatids, as if every crossover changed a homozygous state, gives 1/3 + (2/3)e^(-0.75) = 0.6482, which is wrong. Half of the crossovers from class M swap identical material and change nothing.
+
+### Model A on Q14 (2026-10-10): WRONG, gave 0.8033
+
+Check with 40 million simulated meioses (`verify/q14_big.py`): 0.80169 +- 0.00036. Correct 0.8015 is inside this range; 0.8033 is about 9 standard errors away.
+
+Its error: it treated homozygosity as a parity bit that each crossover flips with chance 1/2, independently of the current state, and so got P = (1 + e^(-0.5))/2 = 1 - r(Haldane). That is wrong because the flip chance depends on the hidden configuration of the two strands the pollen does not receive. From class N (pollen heterozygous, each chromatid differing from its sister), no single crossover can make the pollen homozygous. It also claimed the two intervals are independent without justification.

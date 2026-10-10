@@ -222,3 +222,18 @@ Step 7. Answer = 0.827212 x 0.241581 x 0.150396 = 0.030055, about 0.0301.
 Step 8. Treating the state as "an odd or even number of crossovers" gives 0.0519, which is wrong. From D, only half of all crossovers change the state.
 
 Model A on Q25 (2026-10-10): CORRECT, 0.0301 (0.030055). It used a 6-state four-chromatid chain with dsigma/dlambda = 1/2 - (3/2)sigma, giving the same three factors (0.82721, 0.24158, 0.15040), and checked the marginal P(het at B) = (2/3)(1 - e^-0.75) = 0.35175. Minor: it names its Markov states A-F, which clashes with gene A. Note: on Q19, Q22 and Q23 it used the parity method; here it switched to a full state chain and got it right, so the failure is not consistent across attempts.
+
+## Q26 (central fusion, same-homolog homozygote at both genes) [0.0515]
+Verified: closed form 0.051493; simulation of 8M meioses 0.05151 +- 0.00016 (`verify/q26.py`).
+Wrong methods give: centromere-paired chain 0.0621; treating the loci as independent 0.0088; independent per-chromatid parity about 0.096.
+
+A parthenogenetic weevil reproduces by central fusion, so each daughter keeps one chromatid from each homolog of one meiosis. Genes A and B are on the same chromosome arm. A is 20 cM (map distance) from the centromere, and B is 20 cM beyond A. Crossovers are Poisson, with no chiasma or chromatid interference, and each crossover joins a chromatid of one homolog with a chromatid of the other homolog at that point. The mother is A B / a b. What fraction of her daughters are a b / a b? Give four decimal places.
+
+Solution:
+Step 1. At the centromere the daughter's two chromatids carry different homologs (state D). At any point the state is D, S0 (both carry A B homolog material) or S1 (both carry a b homolog material).
+Step 2. Each crossover joins one strand carrying each homolog's material at that point. From D: S0 or S1 with chance 1/4 each, otherwise D. From S0 or S1: always D.
+Step 3. With Poisson mean m (m = 2x for x Morgans): from D, P(S1) = (1/6)(1 - e^(-3m/2)). From S1: P(S) = 1/3 + (2/3)e^(-3m/2), and P(S1) - P(S0) = e^(-m).
+Step 4. Centromere to A: m1 = 0.4. P(S1 at A) = (1/6)(1 - e^(-0.6)) = (1/6)(0.451188) = 0.075198.
+Step 5. A to B: m2 = 0.4. P(S) = 1/3 + (2/3)(0.548812) = 0.699208, and u = e^(-0.4) = 0.670320. P(S1 at B | S1 at A) = (0.699208 + 0.670320)/2 = 0.684764.
+Step 6. Answer = 0.075198 x 0.684764 = 0.051493, about 0.0515.
+Step 7. Being homozygous at both genes is not enough: the daughter must carry the a b homolog's material at both. Crossovers between A and B can switch her from S1 to D to S0, so the phase term e^(-m) is needed.

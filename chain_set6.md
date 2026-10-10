@@ -28,3 +28,7 @@ Simulation: Q1 0.9100, Q2 0.04493, Q5 0.002081, Q6 88,963.
 - Q4: using N/4 on the wrong side (T = 0.5, 0.5957).
 - Q5: 2mu(t1 + 2N_AB) = 0.002000 (ignores the root population), or 2mu t1 = 0.001000 (ignores ancestral polymorphism).
 - Q6: the unconditional mean, 104,060 (ignores the condition), or t1 + 2N_AB = 100,000.
+
+## Model A results (2026-10-10)
+Q1 0.9098, Q2 0.04511, Q3 0.9537, Q4 0.9998, Q5 0.002081: all correct (its Q5 working, 50,000 + 50,000 + 30,000e^-2 = 104,060, is a correct rearrangement).
+Q6: the pasted response stops at the Q6 heading with no value. Either the response was cut off or the paste was incomplete; if the response really ends there, Q6 is unanswered (incomplete).

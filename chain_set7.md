@@ -24,7 +24,7 @@ Q1 is exact; Q2 to Q5 come from a two-locus coalescent-with-recombination simula
 - Q2: 0.828 (treats the loci as independent) or 0.910 (treats them as completely linked).
 - Q3: 0.910 (independent) or 0 (completely linked).
 - Q4: (0.0451)^2 x 2 = 0.0041 (independent) or 0.0902 (completely linked).
-- Q5: 0.164 (independent) or 0 (completely linked).
+- Q5: 0.168 (independent) or 0 (completely linked).
 - Any answer that ignores recombination before the A-B split. Each species' own population (50,000 generations) also breaks up linkage, so models that only use the internal branch overestimate Q2.
 
 ## Consistency checks

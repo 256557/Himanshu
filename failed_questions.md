@@ -172,3 +172,17 @@ Answer 0.1546 = (2/3 + e^-0.45/3) x (1 - e^-0.75)/3. Simulation of 8M meioses: 0
 
 Model A (2026-10-10): WRONG, gave 0.1712.
 It used the right means (0.3, 0.5) but split crossovers into independent Poisson streams per chromatid and set each allele by the parity of crossovers on that chromatid. It got P(het A) = (1 + e^-0.3)/2 = 0.8704 (correct 0.8792) and P(hom B | het A) = (1 - e^-0.5)/2 = 0.1967 (correct 0.1759). Its parity rule ignores that a crossover changes the pair's state with a probability that depends on the current state (from D only 1/2 of crossovers give S; from S all give D). Its 4-class table summing to 1 is not a real check, because any product of complementary pairs sums to 1.
+
+## Q23 (terminal fusion, het A and hom B) [0.0280]
+Verified: closed form 0.028032; simulation of 8M meioses 0.02789 +- 0.00012 (`verify/q23.py`). The parity method gives 0.0489.
+
+A parthenogenetic snail reproduces by terminal fusion, so each daughter keeps two sister chromatids. Genes A and B are on the same chromosome arm. A is 12 cM (map distance) from the centromere, and B is 18 cM beyond A. Crossovers are Poisson, with no chiasma or chromatid interference, and each crossover joins a chromatid of one homolog with a chromatid of the other. The snail is heterozygous at A and B. What fraction of her daughters are heterozygous at A but homozygous at B? Give four decimal places.
+
+Solution:
+Step 1. Terminal fusion keeps two sister chromatids, which carry the same homolog at the centromere (state S, homozygous). At any point the state is S or D (heterozygous).
+Step 2. Each crossover joins one strand carrying each homolog's material at that point. From S it always gives D. From D it gives S with chance 1/2, and otherwise stays D.
+Step 3. With Poisson mean m (m = 2x for x Morgans): from S, P(D) = (2/3)(1 - e^(-3m/2)); from D, P(S) = (1/3)(1 - e^(-3m/2)).
+Step 4. Centromere to A: m1 = 0.24. P(D at A) = (2/3)(1 - e^(-0.36)) = (2/3)(0.302324) = 0.201549.
+Step 5. A to B: m2 = 0.36. P(S at B | D at A) = (1/3)(1 - e^(-0.54)) = (1/3)(0.417252) = 0.139084.
+Step 6. Answer = 0.201549 x 0.139084 = 0.028032, about 0.0280.
+Step 7. Treating heterozygosity as "an odd number of crossovers" gives 0.0489, which is wrong. From D, only half of all crossovers change the state.

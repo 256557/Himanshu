@@ -135,3 +135,18 @@ Step 6. From S0 at p, over m2 = 0.5: P(S) = 1/3 + (2/3)e^(-0.75) = 0.648244, and
 Step 7. Joint P(p/p and d/d) = 0.060395 x 0.627388 = 0.037891.
 Step 8. Fraction = 0.037891 / 0.116468 = 0.325337, about 0.3253.
 Step 9. Treating the loci as independent (answering P(p/p) = 0.0604), or assuming d/d forces p/p, is wrong. Most d/d daughters became homozygous through a crossover between p and d, so they are still heterozygous at p.
+
+## Q21 (terminal fusion, reverse conditional) [0.0740]
+Verified: closed form 0.073971; simulation of 6M meioses 0.0739 +- 0.0003 (`verify/q21.py`). The parity ("odd number of crossovers") method gives 0.1066.
+
+A parthenogenetic moth reproduces by terminal fusion: the egg fuses with its sister second polar body. Genes A and B are on the same chromosome arm. A is at a map distance of 10 cM from the centromere, and B is 35 cM beyond A (map distances are additive). Crossovers follow a Poisson distribution with no chiasma or chromatid interference. The female is heterozygous at both loci. Among her daughters that are homozygous at B, what fraction are heterozygous at A? Give four decimal places.
+
+Solution:
+Step 1. Terminal fusion joins sister products, so at the centromere the daughter's two chromatids carry the same homolog (state S, homozygous). At any point the state is S or D (heterozygous).
+Step 2. Each crossover joins one strand carrying each homolog's material at that point. From S it always gives D. From D it gives S with chance 1/2.
+Step 3. With Poisson mean m (m = 2x for x Morgans): from S, P(S) = 1/3 + (2/3)e^(-3m/2); from D, P(S) = (1/3)(1 - e^(-3m/2)).
+Step 4. Centromere to A: m1 = 0.2. P(S at A) = 1/3 + (2/3)e^(-0.3) = 0.827212, and P(D at A) = 0.172788.
+Step 5. A to B: m2 = 0.7, e^(-1.05) = 0.349938. P(S at B | S at A) = 1/3 + (2/3)(0.349938) = 0.566625. P(S at B | D at A) = (1/3)(1 - 0.349938) = 0.216687.
+Step 6. Joint: D at A and S at B = 0.172788 x 0.216687 = 0.037441. S at A and S at B = 0.827212 x 0.566625 = 0.468719. Total homozygous at B = 0.506160.
+Step 7. Fraction = 0.037441 / 0.506160 = 0.073971, about 0.0740.
+Step 8. Treating homozygosity as "an even number of crossovers" gives 0.1066, which is wrong. From D, half of all crossovers leave the daughter heterozygous.

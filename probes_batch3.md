@@ -21,3 +21,9 @@ C5. A PCR starts with one double-stranded DNA molecule. After 5 cycles, what fra
 | C5 | 11/16 (0.6875) | (32 - 10) / 32. Common errors: 30/32 or 0.75. |
 
 Verified by strand-level simulation: `verify/batch3_strands.py`.
+
+## Model A results (2026-10-10)
+
+All 5 correct: C1 = 8, C2 = 1, C3 = 3/4, C4 = 1/4, C5 = 11/16.
+- This time it explicitly paired each new strand with its own template, so the B2 error did not repeat. B2 looks like a one-off slip, not a stable weakness.
+- Its working contains self-corrections ("wait, let me redo") and one wrong intermediate formula (T strands = 2^n - 2n - 2), which it fixed later. The final answer section is clean and correct (T strands = 2^(n+1) - 2n - 2; T-T duplexes = 2^n - 2n).

@@ -1,80 +1,71 @@
-# Questions Model A failed (ready to re-ask)
+# Questions to (re-)ask Model A
 
-Answers use the verified full-tetrad values (see half_tetrad_notes.md). Q1, Q2, Q4 and Q6 use the corrected answers, not the old bank values.
+All answers re-verified on 2026-10-10 with the correct crossover rule: each crossover joins one strand carrying homolog-1 material and one carrying homolog-2 material at that point (`verify/material_model.py`, `verify/recheck_all.py`). An earlier version of this file gave wrong "corrected" answers for R1, R2, R4, R6, Q14 and Q15; those are fixed below.
 
-R1 (Q1). A parthenogenetic insect reproduces by central fusion: the egg nucleus fuses with the first polar body's product from the other homolog. She is A B / a b. Gene A is at a map distance of 10 cM from the centromere, and gene B is at a map distance of 30 cM beyond A (map distances are additive, with Poisson crossovers and no chiasma or chromatid interference). What fraction of her daughters are A B / a b? Give four decimal places. [0.6327]
+## Re-ask list (questions Model A failed)
 
-R2 (Q2). A parthenogenetic lizard reproduces by central fusion. Genes A and B lie on the same chromosome arm. Gene A is at a map distance of 20 cM from the centromere, and gene B is at a map distance of 25 cM beyond A (map distances are additive, with Poisson crossovers and no chiasma or chromatid interference). For a female heterozygous at both loci, what fraction of her daughters are homozygous at both loci? Give four decimal places. [0.1205]
+R1 (Q1). A parthenogenetic insect reproduces by central fusion. She is A B / a b. Gene A is at a map distance of 10 cM from the centromere, and gene B is at a map distance of 30 cM beyond A (map distances are additive, with Poisson crossovers and no chiasma or chromatid interference). What fraction of her daughters are A B / a b? Give four decimal places. [0.6171]
+
+R2 (Q2). A parthenogenetic lizard reproduces by central fusion. Genes A and B lie on the same chromosome arm. Gene A is at a map distance of 20 cM from the centromere, and gene B is at a map distance of 25 cM beyond A (map distances are additive, with Poisson crossovers and no chiasma or chromatid interference). For a female heterozygous at both loci, what fraction of her daughters are homozygous at both loci? Give four decimal places. [0.0975]
 
 R3 (Q3). A parthenogenetic moth reproduces by terminal fusion: the egg fuses with its sister second polar body. Genes A and B lie on the same chromosome arm. Gene A is at a map distance of 15 cM from the centromere, and gene B is at a map distance of 20 cM beyond A (map distances are additive, with Poisson crossovers and no chiasma or chromatid interference). For a female heterozygous at both loci, what fraction of her daughters are homozygous at A but heterozygous at B? Give four decimal places. [0.2281]
 
-R4 (Q4). An ant queen produces daughters by central fusion. She is A B / a b. Gene A is at a map distance of 30 cM from the centromere, and gene B is at a map distance of 10 cM beyond A (map distances are additive, with Poisson crossovers and no chiasma or chromatid interference). What fraction of her daughters are A b / a B? Give four decimal places. [0.0376]
+R4 (Q4). An ant queen produces daughters by central fusion. She is A B / a b. Gene A is at a map distance of 30 cM from the centromere, and gene B is at a map distance of 10 cM beyond A (map distances are additive, with Poisson crossovers and no chiasma or chromatid interference). What fraction of her daughters are A b / a B? Give four decimal places. [0.0381]
 
 R5 (Q5). A stick insect reproduces by terminal fusion. Genes A and B lie on the same chromosome arm. Gene A is at a map distance of 50 cM from the centromere, and gene B is at a map distance of 50 cM beyond A (map distances are additive, with Poisson crossovers and no chiasma or chromatid interference). For a female heterozygous at both loci, what fraction of her daughters are homozygous at both loci? Give four decimal places. [0.2324]
 
-R6 (Q6). Cape honeybee workers produce female offspring by central fusion. Genes A and B lie on the same chromosome arm. Gene A is at a map distance of 50 cM from the centromere, and gene B is at a map distance of 50 cM beyond A (map distances are additive, with Poisson crossovers and no chiasma or chromatid interference). For a worker heterozygous at both loci, what fraction of her female offspring are homozygous at both loci? Give four decimal places. [0.1745]
+R6 (Q6). Cape honeybee workers produce female offspring by central fusion. Genes A and B lie on the same chromosome arm. Gene A is at a map distance of 50 cM from the centromere, and gene B is at a map distance of 50 cM beyond A (map distances are additive, with Poisson crossovers and no chiasma or chromatid interference). For a worker heterozygous at both loci, what fraction of her female offspring are homozygous at both loci? Give four decimal places. [0.1248]
 
 R7 (Q12). In Neurospora crassa, genes A and B lie on the same chromosome arm. Gene A is at a map distance of 10 cM from the centromere, and gene B is at a map distance of 20 cM beyond A (map distances are additive, with Poisson crossovers and no chiasma or chromatid interference). In a cross A B x a b, what fraction of ordered asci show second-division segregation for both genes? Give four decimal places. [0.1468]
 
-## What Model A gave before
-
-| # | Model A | Correct |
+| # | Model A gave | Correct |
 |---|---|---|
-| R1 | 0.0687 | 0.6327 |
-| R2 | 0.0806 | 0.1205 |
+| R1 | 0.0687 | 0.6171 |
+| R2 | 0.0806 | 0.0975 |
 | R3 | 0.2132 | 0.2281 |
-| R4 | 0.0351 | 0.0376 |
+| R4 | 0.0351 | 0.0381 |
 | R5 | 0.4678 | 0.2324 |
-| R6 | 0.1580 | 0.1745 |
+| R6 | 0.1580 | 0.1248 |
 | R7 | 0.1501 | 0.1468 |
 
-## New question Q14 (verified: closed form 0.801461, simulation 0.8011 +- 0.0023; script `verify/q14.py`)
+## Q13 (terminal fusion, repulsion) [0.0097]
 
-Question (type as written):
-A diploid alfalfa clone forms unreduced (2n) pollen by first-division restitution. Genes A and B lie on the same chromosome arm. Gene A is at a map distance of 15 cM from the centromere, and gene B is at a map distance of 25 cM beyond A (map distances are additive, with Poisson crossovers and no chiasma or chromatid interference). The clone is heterozygous at both loci. Among its 2n pollen grains that are homozygous at A, what fraction are also homozygous at B? Give four decimal places. [0.8015]
+In a parthenogenetic snail, genes A and B lie on the same chromosome arm. Gene A is at a map distance of 20 cM from the centromere, and gene B is at a map distance of 30 cM beyond A (map distances are additive, with Poisson crossovers and no chiasma or chromatid interference). A female of genotype A b / a B reproduces by terminal fusion, in which the egg fuses with its sister second polar body. What fraction of her daughters are A A B B? Give four decimal places.
 
-Solution (plain text):
-Step 1. In first-division restitution the 2n pollen keeps one chromatid from each homolog at the centromere. Call them c1 (homolog 1) and c2 (homolog 2), and call their sisters c1' and c2'. Crossovers occur between non-sister chromatids (one of c1, c1' with one of c2, c2'), all 4 pairs equally likely, and each swaps the material distal to it.
-Step 2. Classify the four strands at a point into three classes. M: c1 and c2 carry the same homolog's material (the pollen is homozygous). Then c1' and c2' both carry the other homolog's material. PR: c1 and c2 differ, and each matches its own sister (c1 = c1', c2 = c2'; parental or fully reversed). N: c1 and c2 differ, and each differs from its own sister.
-Step 3. One crossover moves between the classes as follows. From M: a c1-c2 or c1'-c2' crossover swaps identical material and changes nothing; the other two pairs give PR. So M goes to M 1/2, PR 1/2. From PR: two pairs give M and two give N, so 1/2 each. From N: two pairs leave N unchanged and two give PR, so N 1/2, PR 1/2.
-Step 4. This one-crossover matrix has eigenvalues 1, 1/2 and -1/2. With a Poisson number of crossovers of mean m, starting in M: P(M) = 1/3 + (1/2)e^(-m/2) + (1/6)e^(-3m/2). A region of x Morgans has mean m = 2x.
-Step 5. A to B is 0.25 M, so m = 0.5. Given that the pollen is homozygous at A, the strands are in class M at A, so P(homozygous at B) = 1/3 + (1/2)e^(-0.25) + (1/6)e^(-0.75) = 0.333333 + 0.389400 + 0.078728 = 0.801461, about 0.8015.
-Step 6. The centromere distance does not matter for this conditional question, because being homozygous at A already fixes class M at A. Following only the pollen's two chromatids, as if every crossover changed a homozygous state, gives 1/3 + (2/3)e^(-0.75) = 0.6482, which is wrong. Half of the crossovers from class M swap identical material and change nothing.
+Solution: The egg and second polar body are sisters, so at the centromere they carry the same homolog (A b or a B, 1/2 each). States: S0 (both A b material), S1 (both a B material), D (different). From S a crossover always gives D; from D it gives S0 or S1 with 1/4 each. With Poisson mean m from S: P(S) = 1/3 + (2/3)e^(-3m/2) and u = e^(-m). m1 = 0.4: P(S0 at A) = (1/2)(1/3 + (2/3)e^(-0.6)) = 0.349604. m2 = 0.6, from S0: P(S1 at B) = (1/3 + (2/3)e^(-0.9) - e^(-0.6))/2 = 0.027784. Answer 0.349604 x 0.027784 = 0.009713, about 0.0097.
 
-### Model A on Q14 (2026-10-10): WRONG, gave 0.8033
+## Q14 (FDR pollen, conditional) [0.6482]
 
-Check with 40 million simulated meioses (`verify/q14_big.py`): 0.80169 +- 0.00036. Correct 0.8015 is inside this range; 0.8033 is about 9 standard errors away.
+A diploid alfalfa clone forms unreduced (2n) pollen by first-division restitution. Genes A and B lie on the same chromosome arm. Gene A is at a map distance of 15 cM from the centromere, and gene B is at a map distance of 25 cM beyond A (map distances are additive, with Poisson crossovers and no chiasma or chromatid interference). The clone is heterozygous at both loci. Among its 2n pollen grains that are homozygous at A, what fraction are also homozygous at B? Give four decimal places.
 
-Its error: it treated homozygosity as a parity bit that each crossover flips with chance 1/2, independently of the current state, and so got P = (1 + e^(-0.5))/2 = 1 - r(Haldane). That is wrong because the flip chance depends on the hidden configuration of the two strands the pollen does not receive. From class N (pollen heterozygous, each chromatid differing from its sister), no single crossover can make the pollen homozygous. It also claimed the two intervals are independent without justification.
+Solution:
+Step 1. FDR pollen gets one chromatid from each homolog at the centromere, c1 and c2.
+Step 2. At any point c1 and c2 carry the same homolog's material (S, homozygous) or different material (D).
+Step 3. Each crossover joins one strand carrying each homolog's material at that point, all 4 pairs equally likely. From S, both of the pollen's strands carry the same material, so the crossover always involves exactly one of them, and the state becomes D. From D, it involves exactly one of them with chance 1/2, giving S.
+Step 4. With Poisson mean m, starting from S: P(S) = 1/3 + (2/3)e^(-3m/2).
+Step 5. Homozygous at A means state S at A, so the centromere distance does not matter. A to B is 0.25 M, so m = 0.5.
+Step 6. P = 1/3 + (2/3)e^(-0.75) = 0.333333 + 0.314911 = 0.648244, about 0.6482.
 
-## New question Q15: explicit chiasma rule, no Poisson (verified: exact 69/400 = 0.1725, simulation of 20M meioses 0.17258 +- 0.00017; script `verify/q15.py`)
+Model A gave 0.8033: WRONG. It treated homozygosity as a bit that every crossover flips with chance 1/2. From S, every crossover changes the state, not half of them.
 
-Question (type as written):
-A parthenogenetic weevil reproduces by central fusion. Genes A and B lie on one chromosome arm, A at 30% and B at 70% of the arm's length from the centromere. In every meiosis this arm forms exactly two chiasmata, each at an independent, uniformly random position along the arm, and each involving a random pair of non-sister chromatids. For a female heterozygous at both loci, what fraction of her daughters are homozygous at both loci? Give four decimal places. [0.1725]
+## Q15 (exactly two chiasmata, central fusion) [0.1125]
 
-Solution (plain text):
-Step 1. Central fusion gives each daughter two non-sister chromatids, c1 and c2, one from each homolog at the centromere. Their sisters are c1' and c2'. Each chiasma swaps the material beyond it between one homolog-1 chromatid and one homolog-2 chromatid, all 4 pairs equally likely.
-Step 2. Track all four chromatids in three classes. M: c1 = c2 (the daughter is homozygous). PR: c1 = c1' and c2 = c2'. N: c1 differs from c1' and c2 differs from c2'. At the centromere the class is PR.
-Step 3. One chiasma moves: PR to M 1/2, N 1/2. M to M 1/2, PR 1/2. N to N 1/2, PR 1/2.
-Step 4. The daughter must be homozygous at A, so at least one chiasma must lie before A. Each chiasma falls before A with probability 0.3, between A and B with 0.4, and beyond B with 0.3.
-Step 5. Case 1: both chiasmata before A (0.3 x 0.3 = 0.09). After two steps from PR, P(M) = (1/2)(1/2) = 1/4. Nothing changes between A and B. Contribution: 0.09 x 1/4 = 0.0225.
-Step 6. Case 2: one chiasma before A and one beyond B (2 x 0.3 x 0.3 = 0.18). P(M at A) = 1/2, and B keeps that class. Contribution: 0.18 x 1/2 = 0.09.
-Step 7. Case 3: one chiasma before A and one between A and B (2 x 0.3 x 0.4 = 0.24). P(M at A) = 1/2, then the second chiasma keeps M with probability 1/2. Contribution: 0.24 x 1/4 = 0.06.
-Step 8. Total = 0.0225 + 0.09 + 0.06 = 0.1725.
-Step 9. Converting to map distances and using a Poisson model (A at 30 cM, B 40 cM beyond) gives 0.1422, which is wrong. The number of chiasmata is fixed at two, not Poisson.
+A parthenogenetic weevil reproduces by central fusion. Genes A and B lie on one chromosome arm, A at 30% and B at 70% of the arm's length from the centromere. In every meiosis this arm forms exactly two chiasmata, each at an independent, uniformly random position along the arm, and each involving a random pair of non-sister chromatids. For a female heterozygous at both loci, what fraction of her daughters are homozygous at both loci? Give four decimal places.
 
-## New question Q16: fixed chiasma + mixed reproduction + unnamed mechanism (verified: exact 0.2050, simulation of 10M 0.20502 +- 0.00026; script `verify/q16.py`)
+Solution:
+Step 1. Central fusion gives the daughter one chromatid from each homolog at the centromere (state D).
+Step 2. One chiasma: from D, S with chance 1/2 (it involves exactly one of her two chromatids); from S, always D.
+Step 3. Each chiasma lies before A with probability 0.3, between A and B with 0.4, and beyond B with 0.3. At least one must lie before A.
+Step 4. Both before A (0.09): S after two steps needs D, then D, then S: (1/2)(1/2) = 1/4. Contribution 0.0225.
+Step 5. One before A, one beyond B (0.18): P(S at A) = 1/2, unchanged at B. Contribution 0.09.
+Step 6. One before A, one between A and B (0.24): S at A, then the second chiasma always gives D at B. Contribution 0.
+Step 7. Total = 0.0225 + 0.09 = 0.1125.
+Check: simulation 0.1126.
 
-Question (type as written):
-A female insect is A B / a b, with A at 30% and B at 70% of one chromosome arm's length from the centromere. This arm always forms exactly one chiasma, at a uniformly random position, between a random pair of non-sister chromatids. 60% of her eggs develop unfertilized: the egg nucleus fuses with a nucleus from the division of the first polar body. The other 40% are fertilized by an a b / a b male. What fraction of all her offspring are a a b b? Give four decimal places. [0.2050]
+## Q16 (one chiasma, mixed reproduction, unnamed central fusion) [0.2050]
 
-Solution (plain text):
-Step 1. Unfertilized eggs: the egg nucleus and a product of the first polar body carry non-sister chromatids, one from each homolog at the centromere (central fusion). Call the egg's chromatid c1 and the partner c2.
-Step 2. With exactly one chiasma, the offspring can be homozygous at A only if the chiasma lies before A (probability 0.3) and involves exactly one of c1 and c2. Of the 4 equally likely non-sister pairs, 2 involve exactly one of them, so this has probability 1/2. Both then carry the same homolog's material beyond the chiasma: the a b homolog or the A B homolog, 1/4 each.
-Step 3. There is no second chiasma, so the state at A carries through to B. P(a a b b | unfertilized) = 0.3 x 1/4 = 0.075.
-Step 4. Fertilized eggs: the sperm is always a b, so the offspring is a a b b exactly when the egg carries a b. The egg chromatid is recombinant between A and B only if the chiasma lies between A and B (0.4) and involves that chromatid (1/2): 0.2. So P(egg = a b) = (1 - 0.2)/2 = 0.4.
-Step 5. Total = 0.6 x 0.075 + 0.4 x 0.4 = 0.045 + 0.16 = 0.2050.
-Step 6. Common errors: treating the fusion as egg + sister (terminal fusion), or forgetting that a homozygote can be A A B B as well as a a b b. Both give 0.2500. Converting to map distances with a Poisson model gives other wrong values.
+A female insect is A B / a b, with A at 30% and B at 70% of one chromosome arm's length from the centromere. This arm always forms exactly one chiasma, at a uniformly random position, between a random pair of non-sister chromatids. 60% of her eggs develop unfertilized: the egg nucleus fuses with a nucleus from the division of the first polar body. The other 40% are fertilized by an a b / a b male. What fraction of all her offspring are a a b b? Give four decimal places.
 
-### Model A on Q16 (2026-10-10): CORRECT, 0.2050
-With exactly one chiasma it simply listed the four chromatids in each region case and enumerated, which avoids the hidden-state trap. Minor slip: it says "8 equally likely scenarios" but lists 4 (the answer is unaffected). Lesson: one chiasma is too easy to enumerate. Use two or more chiasmata (Q15) or Poisson counts.
+Solution: Unfertilized: the chiasma must lie before A (0.3) and involve exactly one of the two fused chromatids (1/2), and they must carry a b material (1/2): 0.075. Fertilized: P(egg = a b) = (1 - 0.4 x 1/2)/2 = 0.4. Total = 0.6 x 0.075 + 0.4 x 0.4 = 0.2050.
+
+Model A gave 0.2050: CORRECT (it enumerated the four chromatids for each chiasma position; one chiasma is easy to enumerate).

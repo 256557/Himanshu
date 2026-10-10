@@ -75,3 +75,6 @@ Step 3. There is no second chiasma, so the state at A carries through to B. P(a 
 Step 4. Fertilized eggs: the sperm is always a b, so the offspring is a a b b exactly when the egg carries a b. The egg chromatid is recombinant between A and B only if the chiasma lies between A and B (0.4) and involves that chromatid (1/2): 0.2. So P(egg = a b) = (1 - 0.2)/2 = 0.4.
 Step 5. Total = 0.6 x 0.075 + 0.4 x 0.4 = 0.045 + 0.16 = 0.2050.
 Step 6. Common errors: treating the fusion as egg + sister (terminal fusion), or forgetting that a homozygote can be A A B B as well as a a b b. Both give 0.2500. Converting to map distances with a Poisson model gives other wrong values.
+
+### Model A on Q16 (2026-10-10): CORRECT, 0.2050
+With exactly one chiasma it simply listed the four chromatids in each region case and enumerated, which avoids the hidden-state trap. Minor slip: it says "8 equally likely scenarios" but lists 4 (the answer is unaffected). Lesson: one chiasma is too easy to enumerate. Use two or more chiasmata (Q15) or Poisson counts.

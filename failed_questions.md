@@ -62,3 +62,16 @@ Step 6. Case 2: one chiasma before A and one beyond B (2 x 0.3 x 0.3 = 0.18). P(
 Step 7. Case 3: one chiasma before A and one between A and B (2 x 0.3 x 0.4 = 0.24). P(M at A) = 1/2, then the second chiasma keeps M with probability 1/2. Contribution: 0.24 x 1/4 = 0.06.
 Step 8. Total = 0.0225 + 0.09 + 0.06 = 0.1725.
 Step 9. Converting to map distances and using a Poisson model (A at 30 cM, B 40 cM beyond) gives 0.1422, which is wrong. The number of chiasmata is fixed at two, not Poisson.
+
+## New question Q16: fixed chiasma + mixed reproduction + unnamed mechanism (verified: exact 0.2050, simulation of 10M 0.20502 +- 0.00026; script `verify/q16.py`)
+
+Question (type as written):
+A female insect is A B / a b, with A at 30% and B at 70% of one chromosome arm's length from the centromere. This arm always forms exactly one chiasma, at a uniformly random position, between a random pair of non-sister chromatids. 60% of her eggs develop unfertilized: the egg nucleus fuses with a nucleus from the division of the first polar body. The other 40% are fertilized by an a b / a b male. What fraction of all her offspring are a a b b? Give four decimal places. [0.2050]
+
+Solution (plain text):
+Step 1. Unfertilized eggs: the egg nucleus and a product of the first polar body carry non-sister chromatids, one from each homolog at the centromere (central fusion). Call the egg's chromatid c1 and the partner c2.
+Step 2. With exactly one chiasma, the offspring can be homozygous at A only if the chiasma lies before A (probability 0.3) and involves exactly one of c1 and c2. Of the 4 equally likely non-sister pairs, 2 involve exactly one of them, so this has probability 1/2. Both then carry the same homolog's material beyond the chiasma: the a b homolog or the A B homolog, 1/4 each.
+Step 3. There is no second chiasma, so the state at A carries through to B. P(a a b b | unfertilized) = 0.3 x 1/4 = 0.075.
+Step 4. Fertilized eggs: the sperm is always a b, so the offspring is a a b b exactly when the egg carries a b. The egg chromatid is recombinant between A and B only if the chiasma lies between A and B (0.4) and involves that chromatid (1/2): 0.2. So P(egg = a b) = (1 - 0.2)/2 = 0.4.
+Step 5. Total = 0.6 x 0.075 + 0.4 x 0.4 = 0.045 + 0.16 = 0.2050.
+Step 6. Common errors: treating the fusion as egg + sister (terminal fusion), or forgetting that a homozygote can be A A B B as well as a a b b. Both give 0.2500. Converting to map distances with a Poisson model gives other wrong values.

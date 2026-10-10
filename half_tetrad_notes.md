@@ -82,7 +82,7 @@ Step 1. In terminal fusion the egg and the second polar body are sister chromati
 Step 2. At any point c1 and c2 are in one of three states. S0: both carry A b homolog material. S1: both carry a B homolog material. D: they differ.
 Step 3. Each crossover is between non-sister chromatids, and the 4 pairs are equally likely. From S0 or S1, the crossover always involves exactly one of c1 and c2, so the state becomes D. From D, it involves exactly one of them with chance 1/2, giving S0 or S1 (1/4 each). Otherwise the state stays D.
 Step 4. A region of x Morgans has a mean of 2x crossovers. With mean m, starting from S: P(S) = 1/3 + (2/3)e^(-3m/2), and u = P(same S as at start) - P(other S) = e^(-m).
-Step 5. Centromere to A is 0.2 M, so m1 = 0.4. The daughter is AA only in state S0 at A. P(S0 at A) = (1/2)(1/3 + (2/3)e^(-0.6)) = (1/2)(0.699208) = 0.349604. This holds whichever homolog the sisters start with, because the state must reach S0 at A either by staying there or by switching to it.
+Step 5. Centromere to A is 0.2 M, so m1 = 0.4. The daughter is AA only in state S0 at A. P(S0 at A) = (1/2)(1/3 + (2/3)e^(-0.6)) = (1/2)(0.699208) = 0.349604. The sisters start in S0 or S1 with chance 1/2 each, so by symmetry S0 and S1 are equally likely at A.
 Step 6. A to B is 0.3 M, so m2 = 0.6. She is BB only in state S1 at B. Starting from S0: P(S1 at B) = (P(S) - u)/2 = (1/3 + (2/3)e^(-0.9) - e^(-0.6))/2 = (0.604379 - 0.548812)/2 = 0.027784.
 Step 7. Fraction = 0.349604 x 0.027784 = 0.009713, about 0.0097.
 Step 8. Treating the loci as independent gives a value about 8 times too high, because AA BB needs the sister pair to switch from one homolog to the other between A and B. That switch requires at least two crossovers in the interval.

@@ -252,3 +252,8 @@ Step 5. Answer = 0.721832 x 0.322099 = 0.232501, about 0.2325.
 
 Model A on Q28 (2026-10-10, egg-cell wording): WRONG, gave 0.2175 (correct 0.2325). This is exactly the predicted parity value.
 Key false claim: "each crossover event in any region involves exactly one of {c1, c2}". That holds only while the two sisters carry the same homolog's material (S). Once they differ (D), a crossover involves both (1/4) or neither (1/4) half the time. So "homozygous iff an even number of crossovers" is wrong for two or more crossovers. Means (0.36, 0.44) were correct.
+
+## Q29 (Neurospora ordered asci, conditional SDS) [0.2782]
+In Neurospora crassa, genes A and B lie on the same arm. A is 12 cM (map distance) from the centromere, and B is 18 cM beyond A. Crossovers are Poisson, with no chiasma or chromatid interference, and each crossover joins a chromatid of one homolog with a chromatid of the other. Among ordered asci showing first-division segregation for A, what fraction show second-division segregation for B? Give four decimal places.
+Answer: 0.2782 = (2/3)(1 - e^(-0.54)). Simulation of 6M meioses agrees (`verify/` material model). Parity method (wrong) gives 0.2566.
+Solution: FDS at A means the two sister chromatids on each centromere are identical at A (state S). From S each crossover gives D; from D a crossover gives S with chance 1/2. With m = 2 x 0.18 = 0.36, P(D at B | S at A) = (2/3)(1 - e^(-3m/2)) = (2/3)(0.417252) = 0.278168. The centromere distance does not matter.

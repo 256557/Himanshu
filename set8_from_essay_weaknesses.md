@@ -21,3 +21,6 @@ Answer: (a) 105, (b) 15, (c) 12, (d) 0.
 Working: (2n - 5)!! = 7!! = 105. Collapsing A and B into one leaf leaves 5 leaves, giving 15 trees. Also collapsing C and D leaves 4 leaves, giving 3 trees, so 15 - 3 = 12. AB|CDEF and AC|BDEF are incompatible (all four intersections, {A}, {B}, {C}, {DEF}, are non-empty), so no tree contains both.
 Likely wrong answers: (d) not 0 (the essay's error); (b) 105/15 = 7 or 3.
 Verified by listing all 105 trees (`verify/set8.py`).
+
+## Model A results (2026-10-10)
+Both Q-A and Q-B answered correctly. Its essay errors seem to come from carelessness in long free-text answers, not an inability with these topics: asked directly with numbers, it gets them right.

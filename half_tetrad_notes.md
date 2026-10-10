@@ -75,7 +75,7 @@ Step 7. Following only the daughter's two strands gives a wrong answer of 0.0169
 ## Q13 (new, verified: exact 0.009713, simulation 0.0098 +- 0.0003; script `verify/q13.py`)
 
 Question (type as written):
-A parthenogenetic snail reproduces by terminal fusion: the egg fuses with its sister second polar body. She is Ab/aB. Gene A is at a map distance of 20 cM from the centromere, and B is 30 cM beyond A on the same arm (additive, Poisson, no interference). What fraction of her daughters are AA BB? Four decimal places. [0.0097]
+In a parthenogenetic snail, genes A and B lie on the same chromosome arm. Gene A is at a map distance of 20 cM from the centromere, and gene B is at a map distance of 30 cM beyond A (map distances are additive, with Poisson crossovers and no chiasma or chromatid interference). A female of genotype A b / a B reproduces by terminal fusion, in which the egg fuses with its sister second polar body. What fraction of her daughters are A A B B? Give four decimal places. [0.0097]
 
 Solution (plain text):
 Step 1. In terminal fusion the egg and the second polar body are sister chromatids, c1 and c2. At the centromere they carry the same homolog: the A b homolog or the a B homolog, each with chance 1/2.

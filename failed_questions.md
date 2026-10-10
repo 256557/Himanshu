@@ -249,3 +249,6 @@ Step 2. With Poisson mean m = 2x: from S, P(S) = 1/3 + (2/3)e^(-3m/2) and P(D) =
 Step 3. Centromere to A: m1 = 0.36. P(S at A) = 1/3 + (2/3)e^(-0.54) = 1/3 + (2/3)(0.582748) = 0.721832.
 Step 4. A to B: m2 = 0.44. P(D at B | S at A) = (2/3)(1 - e^(-0.66)) = (2/3)(0.483149) = 0.322099.
 Step 5. Answer = 0.721832 x 0.322099 = 0.232501, about 0.2325.
+
+Model A on Q28 (2026-10-10, egg-cell wording): WRONG, gave 0.2175 (correct 0.2325). This is exactly the predicted parity value.
+Key false claim: "each crossover event in any region involves exactly one of {c1, c2}". That holds only while the two sisters carry the same homolog's material (S). Once they differ (D), a crossover involves both (1/4) or neither (1/4) half the time. So "homozygous iff an even number of crossovers" is wrong for two or more crossovers. Means (0.36, 0.44) were correct.

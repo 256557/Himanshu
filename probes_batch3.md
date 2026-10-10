@@ -14,7 +14,7 @@ C5. A PCR starts with one double-stranded DNA molecule. After 5 cycles, what fra
 
 | # | Answer | Trap |
 |---|---|---|
-| C1 | 8 | 2^4 - 2x4 = 8. Pairing all 14 short strands together gives 7, and counting 2^4 - 2 gives 14. Duplexes: 8 S/S, 6 H/S, 2 O/H. |
+| C1 | 8 | 2^4 - 2x4 = 8. Pairing all 22 short strands with each other gives 11, and counting 2^4 - 2 gives 14. Duplexes: 8 S/S, 6 H/S, 2 O/H. |
 | C2 | 1 | 2^(n-1) - n = 1. Duplexes: 1 S/S, 2 H/S, 1 O/H. Common errors are 2 (the double-stranded formula) or 3. |
 | C3 | 3/4 | After 2 generations in 14N: 2 hybrid and 2 light. In 15N, all 8 strands get a new heavy partner: 2 heavy (15/15) and 6 hybrid (14/15). The light class disappears. |
 | C4 | 1/4 | Only the original 2 labeled strands remain, spread over 8 chromatids per chromosome lineage. Common error: 1/2. |

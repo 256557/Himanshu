@@ -32,3 +32,4 @@ Simulation: Q1 0.9100, Q2 0.04493, Q5 0.002081, Q6 88,963.
 ## Model A results (2026-10-10)
 Q1 0.9098, Q2 0.04511, Q3 0.9537, Q4 0.9998, Q5 0.002081: all correct (its Q5 working, 50,000 + 50,000 + 30,000e^-2 = 104,060, is a correct rearrangement).
 Q6: the pasted response stops at the Q6 heading with no value. Either the response was cut off or the paste was incomplete; if the response really ends there, Q6 is unanswered (incomplete).
+Final Q6 answer from Model A: not received (the paste ended at the Q6 heading).

@@ -24,6 +24,6 @@ Q5. If instead the same fraction of everyone is vaccinated, what minimum fractio
 
 ## Likely wrong answers
 - Q1: 4 (column sum for children), 2.05 (average of column sums), 1.34 (sqrt(3 x 0.6)), or using rows as infectors.
-- Q2: 3/4.5 = 0.6667 (share of all secondary infections from all sources), 0.75 (children's share of the child-infector column).
+- Q2: 3.5/5.1 = 0.6863 (children's share if there is one infected of each group), 0.75 (children's share of infections caused by a child).
 - Q3: 0.6868 (1 - 1/R0), or 0.6667 (1 - 1/3, children only, ignoring adults).
 - Q4: 3 (direct only) or 3.5.

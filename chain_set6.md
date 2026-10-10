@@ -23,7 +23,7 @@ Q6. Among autosomal loci whose gene tree groups A with B, what is the expected t
 Simulation: Q1 0.9100, Q2 0.04493, Q5 0.002081, Q6 88,963.
 
 ## Likely wrong answers
-- Q1: using T = t/N (0.9887) or t/(4N) (0.7547), or forgetting to convert years to generations.
+- Q1: using T = t/N (0.9878) or t/(4N) (0.7547), or forgetting to convert years to generations.
 - Q3: treating X like autosomes (0.9098) or using 3/4 in the wrong direction (T = 1.5, 0.8512).
 - Q4: using N/4 on the wrong side (T = 0.5, 0.5957).
 - Q5: 2mu(t1 + 2N_AB) = 0.002000 (ignores the root population), or 2mu t1 = 0.001000 (ignores ancestral polymorphism).

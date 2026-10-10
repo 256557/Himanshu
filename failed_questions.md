@@ -46,3 +46,19 @@ Step 6. The centromere distance does not matter for this conditional question, b
 Check with 40 million simulated meioses (`verify/q14_big.py`): 0.80169 +- 0.00036. Correct 0.8015 is inside this range; 0.8033 is about 9 standard errors away.
 
 Its error: it treated homozygosity as a parity bit that each crossover flips with chance 1/2, independently of the current state, and so got P = (1 + e^(-0.5))/2 = 1 - r(Haldane). That is wrong because the flip chance depends on the hidden configuration of the two strands the pollen does not receive. From class N (pollen heterozygous, each chromatid differing from its sister), no single crossover can make the pollen homozygous. It also claimed the two intervals are independent without justification.
+
+## New question Q15: explicit chiasma rule, no Poisson (verified: exact 69/400 = 0.1725, simulation of 20M meioses 0.17258 +- 0.00017; script `verify/q15.py`)
+
+Question (type as written):
+A parthenogenetic weevil reproduces by central fusion. Genes A and B lie on one chromosome arm, A at 30% and B at 70% of the arm's length from the centromere. In every meiosis this arm forms exactly two chiasmata, each at an independent, uniformly random position along the arm, and each involving a random pair of non-sister chromatids. For a female heterozygous at both loci, what fraction of her daughters are homozygous at both loci? Give four decimal places. [0.1725]
+
+Solution (plain text):
+Step 1. Central fusion gives each daughter two non-sister chromatids, c1 and c2, one from each homolog at the centromere. Their sisters are c1' and c2'. Each chiasma swaps the material beyond it between one homolog-1 chromatid and one homolog-2 chromatid, all 4 pairs equally likely.
+Step 2. Track all four chromatids in three classes. M: c1 = c2 (the daughter is homozygous). PR: c1 = c1' and c2 = c2'. N: c1 differs from c1' and c2 differs from c2'. At the centromere the class is PR.
+Step 3. One chiasma moves: PR to M 1/2, N 1/2. M to M 1/2, PR 1/2. N to N 1/2, PR 1/2.
+Step 4. The daughter must be homozygous at A, so at least one chiasma must lie before A. Each chiasma falls before A with probability 0.3, between A and B with 0.4, and beyond B with 0.3.
+Step 5. Case 1: both chiasmata before A (0.3 x 0.3 = 0.09). After two steps from PR, P(M) = (1/2)(1/2) = 1/4. Nothing changes between A and B. Contribution: 0.09 x 1/4 = 0.0225.
+Step 6. Case 2: one chiasma before A and one beyond B (2 x 0.3 x 0.3 = 0.18). P(M at A) = 1/2, and B keeps that class. Contribution: 0.18 x 1/2 = 0.09.
+Step 7. Case 3: one chiasma before A and one between A and B (2 x 0.3 x 0.4 = 0.24). P(M at A) = 1/2, then the second chiasma keeps M with probability 1/2. Contribution: 0.24 x 1/4 = 0.06.
+Step 8. Total = 0.0225 + 0.09 + 0.06 = 0.1725.
+Step 9. Converting to map distances and using a Poisson model (A at 30 cM, B 40 cM beyond) gives 0.1422, which is wrong. The number of chiasmata is fixed at two, not Poisson.

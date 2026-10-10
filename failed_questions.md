@@ -119,3 +119,19 @@ Step 8. Answering 0.6992 (the plain chance of homozygosity at A) ignores the con
 
 Model A on Q19 (2026-10-10, reworded short version with "map distance", "additive" and "no chiasma or chromatid interference"): WRONG, gave 0.5857 (correct 0.5341).
 It used the right crossover means (0.4, 0.6), but claimed that each crossover "flips exactly one of the two allele states" in the sister pair, so the egg is heterozygous iff the number of crossovers is odd. That holds only from a homozygous state. Once the sisters differ, a crossover involves exactly one of them only half the time (both 1/4, neither 1/4), so heterozygosity is not a parity of the crossover count. Its "intuitive check" (fraction > 0.5) does not test the model.
+
+## Q20 (attached-X, reverse conditional) [0.3253]
+Verified: closed form 0.325337; simulation of 8M meioses 0.3249 +- 0.0010 (`verify/q20.py`).
+
+A Drosophila female carries attached-X chromosomes. One arm carries recessive alleles p and d, and the other arm carries their wild-type alleles. Gene p is at a map distance of 15 cM from the centromere, and gene d is 25 cM beyond p (map distances are additive). Crossovers follow a Poisson distribution with no chiasma or chromatid interference. Among her attached-X daughters that are homozygous d/d, what fraction are also homozygous p/p? Give four decimal places.
+
+Solution:
+Step 1. An attached-X daughter receives one strand from each arm, so at the centromere her two strands carry different arms' material (state D). States: D (heterozygous), S0 (both carry p d arm material), S1 (both wild-type arm material).
+Step 2. Each crossover joins one strand carrying each arm's material at that point. From D: S0 or S1 with 1/4 each, otherwise D. From S0 or S1: always D.
+Step 3. With Poisson mean m (m = 2x for x Morgans): from D, P(S0) = (1/6)(1 - e^(-3m/2)). From S0: P(S) = 1/3 + (2/3)e^(-3m/2) and P(S0) - P(S1) = e^(-m).
+Step 4. P(d/d) over the whole region, centromere to d: m = 0.8. P = (1/6)(1 - e^(-1.2)) = (1/6)(0.698806) = 0.116468.
+Step 5. P(p/p): m1 = 0.3. P(S0 at p) = (1/6)(1 - e^(-0.45)) = 0.060395.
+Step 6. From S0 at p, over m2 = 0.5: P(S) = 1/3 + (2/3)e^(-0.75) = 0.648244, and u = e^(-0.5) = 0.606531. P(S0 at d) = (0.648244 + 0.606531)/2 = 0.627388.
+Step 7. Joint P(p/p and d/d) = 0.060395 x 0.627388 = 0.037891.
+Step 8. Fraction = 0.037891 / 0.116468 = 0.325337, about 0.3253.
+Step 9. Treating the loci as independent (answering P(p/p) = 0.0604), or assuming d/d forces p/p, is wrong. Most d/d daughters became homozygous through a crossover between p and d, so they are still heterozygous at p.

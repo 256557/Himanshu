@@ -165,3 +165,10 @@ Step 5. A to B: m2 = 0.5, e^(-0.75) = 0.472367. P(S at B | D at A) = (1/3)(0.527
 Step 6. Joint: D at A and S at B = 0.879209 x 0.175878 = 0.154633. S at A and S at B = 0.120791 x 0.648244 = 0.078302. Total homozygous at B = 0.232935.
 Step 7. Fraction = 0.154633 / 0.232935 = 0.663847, about 0.6638.
 Step 8. Treating homozygosity as "an odd number of crossovers" gives 0.6134, which is wrong. From S, every crossover changes the state; from D, only half do.
+
+## Q22 short version (simplified wording with an explicit crossover rule) [0.1546]
+"A plant makes 2n pollen by first-division restitution, so each pollen grain keeps one chromatid from each homolog. Genes A and B are on the same chromosome arm. A is 15 cM (map distance) from the centromere, and B is 25 cM beyond A. Crossovers are Poisson, with no chiasma or chromatid interference, and each crossover joins a chromatid of one homolog with a chromatid of the other. The plant is heterozygous at A and B. What fraction of the pollen is heterozygous at A but homozygous at B? Give four decimal places."
+Answer 0.1546 = (2/3 + e^-0.45/3) x (1 - e^-0.75)/3. Simulation of 8M meioses: 0.15456 +- 0.00026.
+
+Model A (2026-10-10): WRONG, gave 0.1712.
+It used the right means (0.3, 0.5) but split crossovers into independent Poisson streams per chromatid and set each allele by the parity of crossovers on that chromatid. It got P(het A) = (1 + e^-0.3)/2 = 0.8704 (correct 0.8792) and P(hom B | het A) = (1 - e^-0.5)/2 = 0.1967 (correct 0.1759). Its parity rule ignores that a crossover changes the pair's state with a probability that depends on the current state (from D only 1/2 of crossovers give S; from S all give D). Its 4-class table summing to 1 is not a real check, because any product of complementary pairs sums to 1.

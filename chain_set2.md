@@ -27,3 +27,7 @@ Q5. If instead the same fraction of everyone is vaccinated, what minimum fractio
 - Q2: 3.5/5.1 = 0.6863 (children's share if there is one infected of each group), 0.75 (children's share of infections caused by a child).
 - Q3: 0.6868 (1 - 1/R0), or 0.6667 (1 - 1/3, children only, ignoring adults).
 - Q4: 3 (direct only) or 3.5.
+
+## Model A results (2026-10-10, full setup included)
+All 5 correct: R0 = 3.1928, children's share = 0.7217, children-only threshold = 13/17 = 0.7647, T_c = 4.25, uniform threshold = 0.6868. It checked Q3 by substituting lambda = 1 and checked T_c through the adult chains. Its working contains long hand-arithmetic for sqrt(7.76) and 1/R0, with self-corrections and one intermediate slip (1.000285) that it fixed; the final section is clean.
+(An earlier attempt was given only the five questions without the setup paragraph; it invented a matrix. That attempt does not count.)

@@ -82,3 +82,5 @@ Step 3. Tetratype for A and B means the arrangement at B is one swap away from t
 Step 4. Over the B to C interval, the chance of ending one swap away from the start (tetratype for B and C) is (2/3)(1 - e^(-3m/2)). By symmetry it is split equally among the 4 one-swap arrangements, so a specific one has probability (1/6)(1 - e^(-3m/2)).
 Step 5. B to C is 0.30 M, and a tetrad has a mean of 2x crossovers, so m = 0.6. P = (1/6)(1 - e^(-0.9)) = (1/6)(0.593430) = 0.098905, about 0.0989.
 Step 6. Using the plain NPD formula for B to C (0.0278), or treating the intervals as independent, is wrong. Given that A and B are tetratype, a single effective swap between B and C can already make A and C nonparental ditype.
+
+Model A on Q17 (2026-10-10): CORRECT, 0.0989. It used the same reasoning (a specific one-swap arrangement = P_T(m)/4) and cross-checked P(NPD for A-C) = 0.0571 against the single-interval formula for m = 1.0. Minor wording issues: it calls the tetrad formulas "Haldane", and its permutation notation is loose. Neither affects the answer.

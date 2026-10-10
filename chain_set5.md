@@ -23,3 +23,6 @@ Q6. Among the offspring of the selfed duplex plant that show the dominant phenot
 ## Likely wrong answers (ignoring double reduction, a = 0)
 Q1 1/6, Q2 1/36, Q3 2/9, Q4 0 (no duplex offspring possible), Q5 0 (no aaaa possible), Q6 1/35.
 Other errors: using diploid ratios (Q2 = 1/4), or treating the 10% as a random chromatid choice.
+
+## Model A results (2026-10-10)
+All 6 correct: 1/5, 1/25, 6/25, 1/40, 1/1600, 1/24. Its simplex gametes (1/40 : 18/40 : 21/40) match (2 + a)/4 = 21/40. It handles double reduction when the rate is given directly.

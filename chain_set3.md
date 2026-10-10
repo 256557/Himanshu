@@ -13,7 +13,7 @@ Q5. What minimum fraction of everyone, vaccinated equally in both groups, stops 
 | # | Answer | Working |
 |---|---|---|
 | Q1 | 2.7510 | Largest eigenvalue of [[2.4, 0.8], [0.9, 0.7]] (columns = infector) |
-| Q2 | 1.2152 | Three types: unvaccinated children, vaccinated children, adults. Equivalent 2x2: child susceptibility s = 1 - 0.7p = 0.44, child "infectious mass" a = (1 - p) + p(0.3)(0.5) = 0.32, giving [[2.4a, 0.8s], [0.9a/s ... ]] -> largest eigenvalue 1.2152 |
+| Q2 | 1.2152 | Three types: unvaccinated children, vaccinated children, adults. Equivalent 2x2: child susceptibility s = 1 - 0.7p = 0.44, child "infectious mass" a = (1 - p) + p(0.3)(0.5) = 0.32, giving [[2.4a, 0.8s], [0.9a/s, 0.7]] = [[0.768, 0.352], [0.6545, 0.7]], largest eigenvalue 1.2152 |
 | Q3 | 0.2402 | Leading eigenvector of the 3-type matrix: shares 0.2002 (unvaccinated children), 0.2402 (vaccinated children), 0.5596 (adults) |
 | Q4 | 0.9314 (= 95/102) | Threshold: (1 - 2.4a)(1 - 0.7) - 0.8 x 0.9 x a = 0 gives a = 0.3/1.44, and a = 1 - 0.85p |
 | Q5 | 0.7488 | Vaccine cuts transmission per vaccinated person by 1 - 0.3 x 0.5 = 0.85, so p = (1 - 1/R0)/0.85 |
@@ -23,5 +23,5 @@ Check values: with 100% of children vaccinated, R = 0.9 exactly.
 ## Likely wrong answers
 - Q2: 1.4683 (uses only the 70% susceptibility cut and ignores reduced infectiousness).
 - Q4: "impossible" (with the susceptibility-only shortcut, R stays at 1.1749 even at 100% coverage), or 1 - 1/R0 based answers.
-- Q5: 0.6365 (1 - 1/R0, perfect vaccine) or 0.9090 ((1 - 1/R0)/0.7, susceptibility only).
+- Q5: 0.6365 (1 - 1/R0, perfect vaccine) or 0.9093 ((1 - 1/R0)/0.7, susceptibility only).
 - Q3: answering the share of vaccinated children in the population (0.8 of children) instead of among cases.

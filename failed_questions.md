@@ -203,3 +203,5 @@ Traps:
 Intermediate values in generation 2: D(female X) = 2743/25600, D(male X) = 831/6400.
 
 User's original question (r = 0.15; males 3/4 A1B1, 1/4 A2B2; females 2/3 A1B1/A2B2, 1/3 A1B2/A2B1; D among female X in generation 2) = 581/6400. Monte Carlo 0.0911.
+
+Model A on Q24 (2026-10-10): CORRECT, 413/3600. All its intermediate values match the exact calculation: generation-0 female gametes g11 = 19/40, generation 2 Df = 2743/25600 and Dm = 831/6400, and pooled pA = 37/60 (conserved). It handled the non-HWE generation-0 females, the different paternal and maternal X distributions in generation-1 females, and pooling over both sexes. Lesson: deterministic recursion questions with exact fractions are within its ability; its failures are in stochastic meiotic-state tracking.

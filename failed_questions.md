@@ -116,3 +116,6 @@ Step 5. A to B: m2 = 0.6, e^(-0.9) = 0.406570. P(D at B | S at A) = (2/3)(0.5934
 Step 6. Joint probabilities: S at A and D at B = 0.699208 x 0.395620 = 0.276621. D at A and D at B = 0.300792 x 0.802190 = 0.241292. Total heterozygous at B = 0.517913.
 Step 7. Fraction = 0.276621 / 0.517913 = 0.534106, about 0.5341.
 Step 8. Answering 0.6992 (the plain chance of homozygosity at A) ignores the condition. Being heterozygous at B makes homozygosity at A less likely, because the two loci are linked through the same pair of chromatids.
+
+Model A on Q19 (2026-10-10, reworded short version with "map distance", "additive" and "no chiasma or chromatid interference"): WRONG, gave 0.5857 (correct 0.5341).
+It used the right crossover means (0.4, 0.6), but claimed that each crossover "flips exactly one of the two allele states" in the sister pair, so the egg is heterozygous iff the number of crossovers is odd. That holds only from a homozygous state. Once the sisters differ, a crossover involves exactly one of them only half the time (both 1/4, neither 1/4), so heterozygosity is not a parity of the crossover count. Its "intuitive check" (fraction > 0.5) does not test the model.

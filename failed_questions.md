@@ -101,3 +101,18 @@ Step 7. Using a recombination fraction (Haldane r = 0.1648, or 0.20) is wrong. T
 
 Model A on Q18 (2026-10-10): WRONG, gave 0.0498 (correct 0.1055).
 Errors: (1) It used the map length (0.20) as the mean number of crossovers in the A-B interval instead of 2 x 0.20 = 0.40. (2) It modelled each fixed chromatid pair as having an independent Poisson number of crossovers and set alleles by the parity of crossovers touching each chromatid. That ignores that a crossover between two strands carrying the same homolog's material changes nothing. Even with the correct mean of 0.4, its formula gives 0.0987, still wrong.
+
+## Q19 (SDR 2n eggs, reverse conditional) [0.5341]
+Verified: closed form 0.534106; simulation of 4M meioses 0.5337 +- 0.0007 (`verify/q19.py`).
+
+A diploid potato clone forms unreduced (2n) eggs by second-division restitution. Genes A and B lie on the same chromosome arm. Gene A is at a map distance of 20 cM from the centromere, and gene B is at a map distance of 30 cM beyond A (map distances are additive, with Poisson crossovers and no chiasma or chromatid interference). The clone is heterozygous at both loci. Among its 2n eggs that are heterozygous at B, what fraction are homozygous at A? Give four decimal places.
+
+Solution:
+Step 1. In second-division restitution the 2n egg keeps two sister chromatids, which carry the same homolog's material at the centromere (state S). At any point the state is S (homozygous) or D (heterozygous).
+Step 2. Each crossover joins one strand carrying each homolog's material at that point, all 4 pairs equally likely. From S a crossover always gives D. From D it gives S with chance 1/2.
+Step 3. With Poisson mean m: from S, P(D) = (2/3)(1 - e^(-3m/2)); from D, P(D) = 2/3 + (1/3)e^(-3m/2). A region of x Morgans has m = 2x.
+Step 4. Centromere to A: m1 = 0.4. P(S at A) = 1/3 + (2/3)e^(-0.6) = 0.699208, and P(D at A) = 0.300792.
+Step 5. A to B: m2 = 0.6, e^(-0.9) = 0.406570. P(D at B | S at A) = (2/3)(0.593430) = 0.395620. P(D at B | D at A) = 2/3 + 0.406570/3 = 0.802190.
+Step 6. Joint probabilities: S at A and D at B = 0.699208 x 0.395620 = 0.276621. D at A and D at B = 0.300792 x 0.802190 = 0.241292. Total heterozygous at B = 0.517913.
+Step 7. Fraction = 0.276621 / 0.517913 = 0.534106, about 0.5341.
+Step 8. Answering 0.6992 (the plain chance of homozygosity at A) ignores the condition. Being heterozygous at B makes homozygosity at A less likely, because the two loci are linked through the same pair of chromatids.

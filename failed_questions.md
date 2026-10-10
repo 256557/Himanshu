@@ -150,3 +150,18 @@ Step 5. A to B: m2 = 0.7, e^(-1.05) = 0.349938. P(S at B | S at A) = 1/3 + (2/3)
 Step 6. Joint: D at A and S at B = 0.172788 x 0.216687 = 0.037441. S at A and S at B = 0.827212 x 0.566625 = 0.468719. Total homozygous at B = 0.506160.
 Step 7. Fraction = 0.037441 / 0.506160 = 0.073971, about 0.0740.
 Step 8. Treating homozygosity as "an even number of crossovers" gives 0.1066, which is wrong. From D, half of all crossovers leave the daughter heterozygous.
+
+## Q22 (FDR pollen, reverse conditional) [0.6638]
+Verified: closed form 0.663847; simulation of 6M meioses 0.6637 +- 0.0008 (`verify/q22.py`). The parity method gives 0.6134.
+
+A diploid alfalfa clone makes 2n pollen by first-division restitution. Genes A and B are on the same chromosome arm. A is at a map distance of 15 cM from the centromere, and B is 25 cM beyond A (map distances are additive). Crossovers follow a Poisson distribution with no chiasma or chromatid interference. The clone is heterozygous at both loci. Among 2n pollen grains that are homozygous at B, what fraction are heterozygous at A? Give four decimal places.
+
+Solution:
+Step 1. First-division restitution keeps one chromatid from each homolog at the centromere, so the pollen starts in state D (heterozygous). At any point the state is D or S (homozygous).
+Step 2. Each crossover joins one strand carrying each homolog's material at that point. From D it gives S with chance 1/2. From S it always gives D.
+Step 3. With Poisson mean m (m = 2x for x Morgans): from D, P(D) = 2/3 + (1/3)e^(-3m/2) and P(S) = (1/3)(1 - e^(-3m/2)); from S, P(S) = 1/3 + (2/3)e^(-3m/2).
+Step 4. Centromere to A: m1 = 0.3. P(D at A) = 2/3 + (1/3)e^(-0.45) = 0.879209, and P(S at A) = 0.120791.
+Step 5. A to B: m2 = 0.5, e^(-0.75) = 0.472367. P(S at B | D at A) = (1/3)(0.527633) = 0.175878. P(S at B | S at A) = 1/3 + (2/3)(0.472367) = 0.648244.
+Step 6. Joint: D at A and S at B = 0.879209 x 0.175878 = 0.154633. S at A and S at B = 0.120791 x 0.648244 = 0.078302. Total homozygous at B = 0.232935.
+Step 7. Fraction = 0.154633 / 0.232935 = 0.663847, about 0.6638.
+Step 8. Treating homozygosity as "an odd number of crossovers" gives 0.6134, which is wrong. From S, every crossover changes the state; from D, only half do.

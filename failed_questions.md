@@ -220,3 +220,5 @@ Step 5. A to B: m2 = 0.3. P(D at B | S at A) = (2/3)(1 - e^(-0.45)) = 0.241581.
 Step 6. B to C: m3 = 0.4. P(S at C | D at B) = (1/3)(1 - e^(-0.6)) = 0.150396.
 Step 7. Answer = 0.827212 x 0.241581 x 0.150396 = 0.030055, about 0.0301.
 Step 8. Treating the state as "an odd or even number of crossovers" gives 0.0519, which is wrong. From D, only half of all crossovers change the state.
+
+Model A on Q25 (2026-10-10): CORRECT, 0.0301 (0.030055). It used a 6-state four-chromatid chain with dsigma/dlambda = 1/2 - (3/2)sigma, giving the same three factors (0.82721, 0.24158, 0.15040), and checked the marginal P(het at B) = (2/3)(1 - e^-0.75) = 0.35175. Minor: it names its Markov states A-F, which clashes with gene A. Note: on Q19, Q22 and Q23 it used the parity method; here it switched to a full state chain and got it right, so the failure is not consistent across attempts.

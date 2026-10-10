@@ -186,3 +186,6 @@ Step 4. Centromere to A: m1 = 0.24. P(D at A) = (2/3)(1 - e^(-0.36)) = (2/3)(0.3
 Step 5. A to B: m2 = 0.36. P(S at B | D at A) = (1/3)(1 - e^(-0.54)) = (1/3)(0.417252) = 0.139084.
 Step 6. Answer = 0.201549 x 0.139084 = 0.028032, about 0.0280.
 Step 7. Treating heterozygosity as "an odd number of crossovers" gives 0.0489, which is wrong. From D, only half of all crossovers change the state.
+
+Model A on Q23 (simplified wording, 2026-10-10): WRONG, gave 0.0489 (correct 0.0280). This is exactly the predicted parity-method value.
+It split crossovers into independent Poisson(d) streams for chromatids 1a and 1b and set each allele by parity. The marginal rate per chromatid is right, but the two streams are not independent. When 1a and 1b carry the same material (S), every crossover involves exactly one of them, never both and never neither. When they differ (D), both or neither can be involved. So its factors are wrong: P(het at A) = 0.1906 (correct 0.2015) and P(D at A becomes S at B) = 0.2566 (correct 0.1391).

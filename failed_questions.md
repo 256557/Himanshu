@@ -189,3 +189,17 @@ Step 7. Treating heterozygosity as "an odd number of crossovers" gives 0.0489, w
 
 Model A on Q23 (simplified wording, 2026-10-10): WRONG, gave 0.0489 (correct 0.0280). This is exactly the predicted parity-method value.
 It split crossovers into independent Poisson(d) streams for chromatids 1a and 1b and set each allele by parity. The marginal rate per chromatid is right, but the two streams are not independent. When 1a and 1b carry the same material (S), every crossover involves exactly one of them, never both and never neither. When they differ (D), both or neither can be involved. So its factors are wrong: P(het at A) = 0.1906 (correct 0.2015) and P(D at A becomes S at B) = 0.2566 (correct 0.1391).
+
+## Q24 (X-linked LD, pooled over both sexes) [413/3600]
+Verified: exact fractions (`verify/q24.py`); Monte Carlo of 3M individuals gives 0.1147 (`verify/q24_mc.py`).
+
+Two X-linked genes, A and B, recombine at rate 1/5 in females; there is no recombination in males. In generation 0, 3/5 of males are A1B1 and 2/5 are A2B2. Among females, 1/2 are A1B1/A2B2, 1/4 are A1B2/A2B1, and 1/4 are A1B1/A1B1. The population mates at random, with equal numbers of males and females and no selection or mutation. Find the linkage disequilibrium coefficient D for all X chromosomes in the population in generation 2 (each female carries two X chromosomes and each male one), as an exact fraction.
+
+Answer: 413/3600 (about 0.114722).
+Traps:
+- Averaging the sexes' D values, (2 Df + Dm)/3 = 881/7680, is wrong. Allele frequencies still differ between the sexes in generation 2 (pA = 99/160 in females, 49/80 in males), and that difference adds to the pooled D.
+- Female gametes must come from female genotypes, not from female haplotype frequencies alone: the generation-0 females include A1B1/A1B1 homozygotes and are not random unions.
+- Sons get only a maternal X; daughters get a maternal gamete plus the father's X unchanged (no recombination in males).
+Intermediate values in generation 2: D(female X) = 2743/25600, D(male X) = 831/6400.
+
+User's original question (r = 0.15; males 3/4 A1B1, 1/4 A2B2; females 2/3 A1B1/A2B2, 1/3 A1B2/A2B1; D among female X in generation 2) = 581/6400. Monte Carlo 0.0911.

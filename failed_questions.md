@@ -84,3 +84,17 @@ Step 5. B to C is 0.30 M, and a tetrad has a mean of 2x crossovers, so m = 0.6. 
 Step 6. Using the plain NPD formula for B to C (0.0278), or treating the intervals as independent, is wrong. Given that A and B are tetratype, a single effective swap between B and C can already make A and C nonparental ditype.
 
 Model A on Q17 (2026-10-10): CORRECT, 0.0989. It used the same reasoning (a specific one-swap arrangement = P_T(m)/4) and cross-checked P(NPD for A-C) = 0.0571 against the single-interval formula for m = 1.0. Minor wording issues: it calls the tetrad formulas "Haldane", and its permutation notation is loose. Neither affects the answer.
+
+## Q18 (central fusion, repulsion parent, conditional phase) [0.1055]
+Verified: closed form 0.105510; simulation of 4M meioses 0.1057 +- 0.0004 (`verify/q18.py`).
+
+A parthenogenetic mite reproduces by central fusion. Genes A and B lie on the same chromosome arm. Gene A is at a map distance of 25 cM from the centromere, and gene B is at a map distance of 20 cM beyond A (map distances are additive, with Poisson crossovers and no chiasma or chromatid interference). The mother is A b / a B. Among her daughters that are heterozygous at both loci, what fraction are A B / a b? Give four decimal places.
+
+Solution:
+Step 1. Central fusion gives the daughter two chromatids, c1 and c2, from different homologs at the centromere. At any point they carry different homologs' material (D) or the same (S).
+Step 2. Each crossover joins one strand carrying each homolog's material at that point, all 4 pairs equally likely. From D: exactly one of c1 and c2 is involved with chance 1/2 (giving S); both are involved with chance 1/4 (they swap homologs, staying D); neither with chance 1/4 (no change).
+Step 3. With Poisson mean m, starting from D with a known phase: P(D) = 2/3 + (1/3)e^(-3m/2), and P(same phase) - P(swapped phase) = e^(-m).
+Step 4. The daughter is heterozygous at A, so she is in D at A. The centromere distance does not matter for this conditional question.
+Step 5. She is A B / a b exactly when the phase at B is swapped relative to A (the chromatid with A from the A b homolog carries B from the a B homolog). A to B is 0.2 M, so m = 0.4. P(D at B) = 2/3 + (1/3)e^(-0.6) = 0.849604. P(swapped) = (0.849604 - e^(-0.4))/2 = (0.849604 - 0.670320)/2 = 0.089642.
+Step 6. Fraction = 0.089642 / 0.849604 = 0.105510, about 0.1055.
+Step 7. Using a recombination fraction (Haldane r = 0.1648, or 0.20) is wrong. The two chromatids come from one meiosis, so a crossover can make the daughter homozygous instead of swapping her phase.

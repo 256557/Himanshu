@@ -69,3 +69,16 @@ A female insect is A B / a b, with A at 30% and B at 70% of one chromosome arm's
 Solution: Unfertilized: the chiasma must lie before A (0.3) and involve exactly one of the two fused chromatids (1/2), and they must carry a b material (1/2): 0.075. Fertilized: P(egg = a b) = (1 - 0.4 x 1/2)/2 = 0.4. Total = 0.6 x 0.075 + 0.4 x 0.4 = 0.2050.
 
 Model A gave 0.2050: CORRECT (it enumerated the four chromatids for each chiasma position; one chiasma is easy to enumerate).
+
+## Q17 (yeast unordered tetrads, three genes, conditional) [0.0989]
+Verified: exact 0.098905; simulation of 4M tetrads 0.0991 +- 0.0005 (`verify/q17.py`).
+
+In yeast, genes A, B and C lie in that order on one chromosome arm. A and B are at a map distance of 20 cM, and B and C at a map distance of 30 cM (map distances are additive, with Poisson crossovers and no chiasma or chromatid interference). In a cross A B C x a b c, among unordered tetrads that are tetratype for A and B, what fraction are nonparental ditype for A and C? Give four decimal places.
+
+Solution:
+Step 1. At any point, two of the four spores carry parent-1 material and two carry parent-2 material. Each crossover swaps the material beyond it between one parent-1 strand and one parent-2 strand (4 pairs, equally likely).
+Step 2. Compare the strand arrangement at two loci. PD: same arrangement. NPD: every strand switched. T: exactly two strands switched, which is the result of one effective swap.
+Step 3. Tetratype for A and B means the arrangement at B is one swap away from the arrangement at A. NPD for A and C means the arrangement at C is the full reverse of A. From the B arrangement, the full reverse of A is also exactly one swap away, and it is one specific arrangement out of the 4 reachable by a single swap.
+Step 4. Over the B to C interval, the chance of ending one swap away from the start (tetratype for B and C) is (2/3)(1 - e^(-3m/2)). By symmetry it is split equally among the 4 one-swap arrangements, so a specific one has probability (1/6)(1 - e^(-3m/2)).
+Step 5. B to C is 0.30 M, and a tetrad has a mean of 2x crossovers, so m = 0.6. P = (1/6)(1 - e^(-0.9)) = (1/6)(0.593430) = 0.098905, about 0.0989.
+Step 6. Using the plain NPD formula for B to C (0.0278), or treating the intervals as independent, is wrong. Given that A and B are tetratype, a single effective swap between B and C can already make A and C nonparental ditype.

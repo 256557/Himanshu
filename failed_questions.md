@@ -205,3 +205,18 @@ Intermediate values in generation 2: D(female X) = 2743/25600, D(male X) = 831/6
 User's original question (r = 0.15; males 3/4 A1B1, 1/4 A2B2; females 2/3 A1B1/A2B2, 1/3 A1B2/A2B1; D among female X in generation 2) = 581/6400. Monte Carlo 0.0911.
 
 Model A on Q24 (2026-10-10): CORRECT, 413/3600. All its intermediate values match the exact calculation: generation-0 female gametes g11 = 19/40, generation 2 Df = 2743/25600 and Dm = 831/6400, and pooled pA = 37/60 (conserved). It handled the non-HWE generation-0 females, the different paternal and maternal X distributions in generation-1 females, and pooling over both sexes. Lesson: deterministic recursion questions with exact fractions are within its ability; its failures are in stochastic meiotic-state tracking.
+
+## Q25 (SDR 2n eggs, three genes) [0.0301]
+Verified: closed form 0.030055; simulation of 8M meioses 0.03004 +- 0.00012 (`verify/q25.py`). The parity method gives 0.0519.
+
+A potato clone makes 2n eggs by second-division restitution, so each egg keeps two sister chromatids. Genes A, B and C are on the same chromosome arm in that order. A is 10 cM (map distance) from the centromere, B is 15 cM beyond A, and C is 20 cM beyond B. Crossovers are Poisson, with no chiasma or chromatid interference, and each crossover joins a chromatid of one homolog with a chromatid of the other. The clone is heterozygous for all three genes. What fraction of its 2n eggs are homozygous for A, heterozygous for B, and homozygous for C? Give four decimal places.
+
+Solution:
+Step 1. Sister chromatids carry the same homolog at the centromere (state S, homozygous). At any point the state is S or D (heterozygous).
+Step 2. From S, a crossover always gives D. From D, it gives S with chance 1/2, and otherwise stays D.
+Step 3. With Poisson mean m (m = 2x for x Morgans): from S, P(S) = 1/3 + (2/3)e^(-3m/2) and P(D) = (2/3)(1 - e^(-3m/2)); from D, P(S) = (1/3)(1 - e^(-3m/2)).
+Step 4. Centromere to A: m1 = 0.2. P(S at A) = 1/3 + (2/3)e^(-0.3) = 0.827212.
+Step 5. A to B: m2 = 0.3. P(D at B | S at A) = (2/3)(1 - e^(-0.45)) = 0.241581.
+Step 6. B to C: m3 = 0.4. P(S at C | D at B) = (1/3)(1 - e^(-0.6)) = 0.150396.
+Step 7. Answer = 0.827212 x 0.241581 x 0.150396 = 0.030055, about 0.0301.
+Step 8. Treating the state as "an odd or even number of crossovers" gives 0.0519, which is wrong. From D, only half of all crossovers change the state.

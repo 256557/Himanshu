@@ -71,3 +71,18 @@ Step 5. Forked to yellow is 0.56 M, so m2 = 1.12. This gives 1/6 + 0.75 x e^(-0.
 Step 6. A daughter is yellow and forked only if she is homozygous y f at both loci: 0.043197 x 0.610605 = 0.026376, about 0.0264.
 
 Step 7. Following only the daughter's two strands gives a wrong answer of 0.0169. That method assumes every crossover changes a homozygous state, which is true only when the two strands are sisters.
+
+## Q13 (new, verified: exact 0.009713, simulation 0.0098 +- 0.0003; script `verify/q13.py`)
+
+Question (type as written):
+A parthenogenetic snail reproduces by terminal fusion: the egg fuses with its sister second polar body. She is Ab/aB. Gene A is at a map distance of 20 cM from the centromere, and B is 30 cM beyond A on the same arm (additive, Poisson, no interference). What fraction of her daughters are AA BB? Four decimal places. [0.0097]
+
+Solution (plain text):
+Step 1. In terminal fusion the egg and the second polar body are sister chromatids, c1 and c2. At the centromere they carry the same homolog: the A b homolog or the a B homolog, each with chance 1/2.
+Step 2. At any point c1 and c2 are in one of three states. S0: both carry A b homolog material. S1: both carry a B homolog material. D: they differ.
+Step 3. Each crossover is between non-sister chromatids, and the 4 pairs are equally likely. From S0 or S1, the crossover always involves exactly one of c1 and c2, so the state becomes D. From D, it involves exactly one of them with chance 1/2, giving S0 or S1 (1/4 each). Otherwise the state stays D.
+Step 4. A region of x Morgans has a mean of 2x crossovers. With mean m, starting from S: P(S) = 1/3 + (2/3)e^(-3m/2), and u = P(same S as at start) - P(other S) = e^(-m).
+Step 5. Centromere to A is 0.2 M, so m1 = 0.4. The daughter is AA only in state S0 at A. P(S0 at A) = (1/2)(1/3 + (2/3)e^(-0.6)) = (1/2)(0.699208) = 0.349604. This holds whichever homolog the sisters start with, because the state must reach S0 at A either by staying there or by switching to it.
+Step 6. A to B is 0.3 M, so m2 = 0.6. She is BB only in state S1 at B. Starting from S0: P(S1 at B) = (P(S) - u)/2 = (1/3 + (2/3)e^(-0.9) - e^(-0.6))/2 = (0.604379 - 0.548812)/2 = 0.027784.
+Step 7. Fraction = 0.349604 x 0.027784 = 0.009713, about 0.0097.
+Step 8. Treating the loci as independent gives a value about 8 times too high, because AA BB needs the sister pair to switch from one homolog to the other between A and B. That switch requires at least two crossovers in the interval.

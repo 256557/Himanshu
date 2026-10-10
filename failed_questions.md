@@ -98,3 +98,6 @@ Step 4. The daughter is heterozygous at A, so she is in D at A. The centromere d
 Step 5. She is A B / a b exactly when the phase at B is swapped relative to A (the chromatid with A from the A b homolog carries B from the a B homolog). A to B is 0.2 M, so m = 0.4. P(D at B) = 2/3 + (1/3)e^(-0.6) = 0.849604. P(swapped) = (0.849604 - e^(-0.4))/2 = (0.849604 - 0.670320)/2 = 0.089642.
 Step 6. Fraction = 0.089642 / 0.849604 = 0.105510, about 0.1055.
 Step 7. Using a recombination fraction (Haldane r = 0.1648, or 0.20) is wrong. The two chromatids come from one meiosis, so a crossover can make the daughter homozygous instead of swapping her phase.
+
+Model A on Q18 (2026-10-10): WRONG, gave 0.0498 (correct 0.1055).
+Errors: (1) It used the map length (0.20) as the mean number of crossovers in the A-B interval instead of 2 x 0.20 = 0.40. (2) It modelled each fixed chromatid pair as having an independent Poisson number of crossovers and set alleles by the parity of crossovers touching each chromatid. That ignores that a crossover between two strands carrying the same homolog's material changes nothing. Even with the correct mean of 0.4, its formula gives 0.0987, still wrong.

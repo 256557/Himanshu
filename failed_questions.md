@@ -237,3 +237,15 @@ Step 4. Centromere to A: m1 = 0.4. P(S1 at A) = (1/6)(1 - e^(-0.6)) = (1/6)(0.45
 Step 5. A to B: m2 = 0.4. P(S) = 1/3 + (2/3)(0.548812) = 0.699208, and u = e^(-0.4) = 0.670320. P(S1 at B | S1 at A) = (0.699208 + 0.670320)/2 = 0.684764.
 Step 6. Answer = 0.075198 x 0.684764 = 0.051493, about 0.0515.
 Step 7. Being homozygous at both genes is not enough: the daughter must carry the a b homolog's material at both. Crossovers between A and B can switch her from S1 to D to S0, so the phase term e^(-m) is needed.
+
+## Q28 (SDR 2n eggs, hom A het B, short) [0.2325]
+Verified: closed form 0.232501; simulation of 8M meioses 0.23235 +- 0.0003 (`verify/q28.py`). The parity method Model A used on Q23 gives 0.2175.
+
+A potato makes 2n eggs by second-division restitution, so each egg keeps two sister chromatids. Genes A and B are on the same arm. A is 18 cM (map distance) from the centromere, and B is 22 cM beyond A. Crossovers are Poisson, with no chiasma or chromatid interference, and each crossover joins a chromatid of one homolog with a chromatid of the other. The plant is heterozygous for both genes. What fraction of its 2n eggs are homozygous for A but heterozygous for B? Give four decimal places.
+
+Solution:
+Step 1. The sisters carry the same homolog at the centromere (state S). From S, a crossover always gives D; from D, it gives S with chance 1/2.
+Step 2. With Poisson mean m = 2x: from S, P(S) = 1/3 + (2/3)e^(-3m/2) and P(D) = (2/3)(1 - e^(-3m/2)).
+Step 3. Centromere to A: m1 = 0.36. P(S at A) = 1/3 + (2/3)e^(-0.54) = 1/3 + (2/3)(0.582748) = 0.721832.
+Step 4. A to B: m2 = 0.44. P(D at B | S at A) = (2/3)(1 - e^(-0.66)) = (2/3)(0.483149) = 0.322099.
+Step 5. Answer = 0.721832 x 0.322099 = 0.232501, about 0.2325.

@@ -23,7 +23,7 @@ Based on what has worked: Model A passes standard textbook traps, and fails when
 16. Translate the biology: describe the mechanism without naming it, e.g. "the egg fuses with the polar body produced at the first meiotic division" instead of "central fusion". The model must recognise which case it is.
 
 ## Writing checklist
-- Verify every answer two ways (exact calculation plus simulation). The original bank had 6 wrong answers.
+- Verify every answer two ways (exact calculation plus simulation), and make sure the simulation uses the right biology: crossovers pair strands by local homolog material, not by centromere.
 - One reading only: state the crossover model, the interference assumptions and the map-distance convention.
 - Under about 80 words, so the model does not time out or skip parts.
 - One question per message.

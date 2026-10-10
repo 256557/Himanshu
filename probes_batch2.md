@@ -23,3 +23,9 @@ B8. At 37 C, free calcium is 0.0001 mM inside a cell and 2 mM outside. What is t
 | B6 | 1/100 | Mitochondria are haploid and inherited only through females. The nuclear answer is 1/400. |
 | B7 | 1/3 | v = S / (Km(1 + I/Ki) + S) = 1 / (2 + 1). The common slip is 1/4. |
 | B8 | about +132 mV | z = 2 halves the slope: 30.8 x log10(20000). Using z = 1 gives about +265. |
+
+## Model A results (2026-10-10)
+
+- Correct: B1 (6), B3 (2.4 L/min), B4 (46), B5 (200), B6 (1/100), B7 (1/3).
+- **B2 wrong: answered 4; correct is 2.** Its strand counts after cycle 3 (2 L, 6 H, 8 S) are right, but it paired all 8 short strands with each other. In PCR each new strand stays paired with its own template. 4 of the new short strands sit on half-long templates (H/S duplexes), and only the 2 short templates carry new short strands, giving 2 exact-length duplexes (2^n - 2n = 2).
+- **B8 missing:** not answered.

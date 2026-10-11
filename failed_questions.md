@@ -272,3 +272,5 @@ Model A on Q30 (version with parts a/b/c, 2026-10-11): CORRECT, 2/3, 1/3, 1/5. I
 
 Model A on Q30 version with fewer hints (allele frequency only, 2026-10-11): WRONG, gave 0.1667 (1/6); correct 0.3333 (1/3).
 Errors: (1) It wrote adult genotype frequencies as p^2/(1 - q^2) and 2pq/(1 - q^2) while defining q as the adult allele frequency. With those frequencies the adult allele frequency is q/(1 + q), not q, so it mixed the zygote and adult allele frequencies. (2) It applied q'' = q_z/(1 + q_z), which assumes zygotes are formed from one gamete pool in Hardy-Weinberg proportions (tt = q_z^2). Here eggs and sperm differ (q_egg vs q_sperm), so tt = q_egg x q_sperm, not q_z^2. Both shortcuts come from the single-sex recessive-lethal formula and do not apply with sex-specific drive.
+
+Model A on Q33 (hint-free sex-specific drive, 2026-10-11): CORRECT, 0.3700. It tracked sperm and egg frequencies separately, wrote correct recursions q_m' = 0.8(q_m + q_f - 2q_m q_f)/(1 - q_m q_f) and q_f' = 0.5(q_m + q_f - q_m q_f)/(1 - 0.5 q_m q_f), and found the closed form q_f* = 1 - 4^(-1/3) = 0.370039, which matches the iterated equilibrium to six decimals.

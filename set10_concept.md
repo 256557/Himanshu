@@ -13,5 +13,5 @@ A female kangaroo is heterozygous for two electrophoretic variants of the X-link
 
 Answer: almost only variant A.
 
-In marsupials X inactivation is imprinted: the paternal X is inactivated in every cell rather than at random. Her somatic cells therefore express the maternal variant, A. Silencing of the paternal X is incomplete for some genes and tissues, so weak B activity can appear in some tissues, but no 50:50 mosaic is expected. Kangaroo PGK1 variants were among the first evidence for this paternal inactivation (Cooper and colleagues, early 1970s).
-Likely wrong answer: a mosaic of A and B cells in roughly equal proportions, as in eutherian random X inactivation.
+In marsupials X inactivation is imprinted: the paternal X is inactivated in every cell rather than at random. Her somatic cells therefore express the maternal variant, A. Silencing of the paternal X is incomplete for some genes and tissues, so weak B activity can appear in some tissues, but no 50:50 mixture of A and B cells is expected. Kangaroo PGK1 variants were among the first evidence for this paternal inactivation (Cooper and colleagues, early 1970s).
+Likely wrong answer: a roughly equal mixture of A-expressing and B-expressing cells, as in eutherian random X inactivation.

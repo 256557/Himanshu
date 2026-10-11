@@ -3,7 +3,7 @@
 ## Question 1. Heritable divergence without DNA sequence variation
 
 ### Step 1. Requirement
-A heritable difference between genetically identical cells needs a state that is self-reinforcing, so that it is copied at division and switches only rarely. 
+A heritable difference between genetically identical cells needs a state that is self-reinforcing, so that it is copied at division and switches only rarely.
 
 If a state switches with probability k per division, it persists over n divisions when nk is much smaller than 1.
 
@@ -42,7 +42,7 @@ e^(-r alpha) l(alpha) delta_m > delta_s x (sum of e^(-rx) l(x) m(x) over x > bet
 4. The two effects cannot be separated by recombination or modifier loci, because they come from one gene product.
 
 ### Step 4. The role of extrinsic mortality
-Raising an age-independent hazard by mu multiplies l(x) by e^(-mu x), and the Euler-Lotka equation then lowers r by exactly mu. The product e^(-rx) l(x) is unchanged, so both gradients and the condition in Step 2 therefore stay the same. A numerical check confirms this (`verify/ap_extrinsic.py`). Extrinsic mortality favours such alleles only when it rises with age, or when population regulation acts on particular ages, for example on juvenile survival.
+Raising an age-independent hazard by mu multiplies l(x) by e^(-mu x), and the Euler-Lotka equation then lowers r by exactly mu. The product e^(-rx) l(x) is unchanged, so both gradients and the condition in Step 2 stay the same. A numerical check confirms this (`verify/ap_extrinsic.py`). Extrinsic mortality favours such alleles only when it rises with age, or when population regulation acts on particular ages, for example on juvenile survival.
 
 ### Conclusion
 An early-benefit, late-cost allele spreads when its fecundity gain, weighted by e^(-r alpha) l(alpha), exceeds its survival cost weighted by the reproduction remaining after the cost begins. This is easiest when the cost falls late in or after the reproductive span, when reproduction is concentrated early and when the population is growing; a constant extrinsic hazard alone does not change the outcome.

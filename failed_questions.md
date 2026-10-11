@@ -310,3 +310,5 @@ Model A on set 17 (recessive load under outcrossing and selfing, 2026-10-11): CO
 Model A on Q35 (terminal fusion, AB/ab, Ab/aB daughters; 2026-10-11): WRONG, gave 0.0025; correct 0.0270. Two errors: (1) treated 20 cM map distance as r = 0.20 and converted with Haldane (mean 0.51 instead of 0.40); (2) parity method with independent Poisson streams per sister chromatid (2p^3(1-p)). Chromatid-tracking failure count now 14 of 16.
 
 Model A on compensatory mutation Q1 (2026-10-11): PARTLY WRONG. Target-size reason correct; errors: Ile->Asp 'cavity' example, mutational-asymmetry argument, tRNA wording; omits global stabilising suppressors.
+
+Model A on Q36 (central fusion Ab/aB, 2026-10-11): WRONG, 0.06883 = (1-e^-0.8)/8; correct 0.07616. Used fixed-pair independent Poisson(0.1) parities with XOR (swaps do not combine by parity). Chromatid tracking now 15 of 17 failures.

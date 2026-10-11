@@ -1,40 +1,36 @@
-# Q37 solution: SDR 2n eggs from an Ab/aB plant
+# Q37 solution: allelic composition of SDR 2n eggs from an Ab/aB parent
 
-## Step 1. Crossover means from map distance
-Map distance gives the mean number of crossovers directly. The interval from the centromere to A is 0.15 Morgans, so m1 = 2 x 0.15 = 0.30. The interval from A to B is 0.25 Morgans, so m2 = 2 x 0.25 = 0.50.
+## 1. Crossover frequencies from map distance
+Map distance is additive and equals half the mean number of crossovers per bivalent. Under a Poisson model, the crossover number in the centromere-A interval (0.15 M) has mean m1 = 0.30, and that in the A-B interval (0.25 M) has mean m2 = 0.50. Because the distances are map distances, no mapping function is applied.
 
-## Step 2. What the egg carries
-Second-division restitution keeps the two products of one secondary meiocyte, so the egg carries two sister chromatids. At the centromere they carry the same homolog.
+## 2. Chromatid composition of SDR eggs
+Second-division restitution retains both products of a single secondary meiocyte. Each 2n egg therefore contains two sister chromatids, which carry the same parental homolog at the centromere.
 
-## Step 3. The genotype required
-The mother carries A with b on one homolog and a with B on the other. An AB/ab egg must be heterozygous at both loci, and the chromatid that carries the A-homolog at A must carry the other homolog at B. The pair must therefore be heterozygous at A and at B with the order of the homologs reversed between the two loci.
+## 3. Definition of the target genotype
+The parent carries the haplotypes Ab and aB. An AB/ab egg is heterozygous at both loci, and the chromatid that carries the Ab homolog at A carries the aB homolog at B. The two retained chromatids must therefore differ at A and at B, with the homolog order reversed between the loci.
 
-## Step 4. States of the chromatid pair and the crossover rule
-At any point the two kept chromatids carry the same homolog (S) or different homologs (D). Each crossover joins one strand carrying each homolog's material at that point, with all four pairings equally likely.
-1. From S, exactly one kept chromatid is involved, and the pair moves to D.
-2. From D, the crossover involves both kept chromatids with probability 1/4, which reverses the order; one of them with probability 1/2, which moves the pair to S; and neither with probability 1/4.
+## 4. State model for the retained chromatid pair
+At each position along the arm the retained pair is either homozygous for parental origin (state S) or heterozygous (state D). At any position two strands carry material from each homolog, and a crossover joins one strand of each class, with the four possible pairings equally likely.
+1. In state S, every crossover involves exactly one retained chromatid and converts the pair to D.
+2. In state D, a crossover involves both retained chromatids with probability 1/4, which reverses the homolog order; one of them with probability 1/2, which converts the pair to S; and neither with probability 1/4.
 
-The kept chromatids are therefore not involved independently of each other, and their involvement depends on the state reached so far.
+Involvement of the two chromatids is therefore dependent on the current state, and the chromatids cannot be treated as independent.
 
-## Step 5. Probabilities over an interval
-For a Poisson number of crossovers of mean m:
+## 5. Transition probabilities over an interval
+For a Poisson number of crossovers with mean m, the model in section 4 gives:
 1. from S, P(D) = (2/3)(1 - e^(-3m/2));
-2. from D, P(D) = 2/3 + (1/3)e^(-3m/2), and P(same order) - P(reversed order) = e^(-m).
+2. from D, P(D) = 2/3 + (1/3)e^(-3m/2), and the difference between the probabilities of retained and reversed homolog order is e^(-m).
 
-## Step 6. Centromere to A
-The pair starts in S, and m1 = 0.30:
+## 6. Interval from the centromere to A
+The pair enters the interval in state S. With m1 = 0.30,
 
-P(D at A) = (2/3)(1 - e^(-0.45)) = (2/3)(0.362372) = 0.241581.
+P(D at A) = (2/3)(1 - e^(-0.45)) = 0.241581.
 
-## Step 7. A to B
-The pair is in D at A, and m2 = 0.50:
+## 7. Interval from A to B
+The pair enters the interval in state D. With m2 = 0.50, P(D at B) = 2/3 + (1/3)e^(-0.75) = 0.824122 and the order difference is e^(-0.5) = 0.606531. The probability that the pair remains heterozygous with reversed order is (0.824122 - 0.606531)/2 = 0.108796.
 
-P(D at B) = 2/3 + (1/3)e^(-0.75) = 0.666667 + 0.157455 = 0.824122;
-P(same order) - P(reversed order) = e^(-0.5) = 0.606531;
-P(D with reversed order) = (0.824122 - 0.606531)/2 = 0.108796.
-
-## Step 8. Result
-P(AB/ab) = 0.241581 x 0.108796 = 0.026283, which is 0.02628 to five decimal places.
+## 8. Result
+The frequency of AB/ab eggs is 0.241581 x 0.108796 = 0.026283, or 0.02628 to five decimal places.
 
 ## Answer
 0.02628

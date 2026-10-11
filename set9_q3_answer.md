@@ -1,29 +1,11 @@
 # Set 9 Q3: model answer
 
-## 1. Definitions
-Intergenerational effects appear in generations whose cells were present during the exposure. Transgenerational inheritance can be claimed only for the first generation with no cell, germ cell or precursor that was present during the exposure.
+The cut-off generation is set by which cells were present when the exposure happened, because any such cell could carry a direct effect of the compound.
 
-## 2. Pregnant female exposed
-1. The F0 mother is exposed directly.
-2. The F1 embryo is exposed in utero.
-3. The primordial germ cells of the F1 embryo, which will form the F2, are exposed at the same time.
+When a pregnant female is exposed, three generations are in contact with the endocrine disruptor at once: the mother (F0), the embryo she carries (F1), and the primordial germ cells inside that embryo, which will later give rise to the F2. A phenotype in the F1 or F2 can therefore reflect direct exposure, and only a phenotype that persists into the F3 can be attributed to transgenerational inheritance.
 
-The F3 is therefore the first unexposed generation, and a phenotype must be present in the F3 or later to count as transgenerational.
+Exposure of an adult male before mating is shorter by one generation. It reaches the male and his sperm, so the F1, which develops from an exposed sperm, is still directly affected. The germ cells of that F1 arise after the exposure has ended, which makes the F2 the first unexposed generation.
 
-## 3. Adult male exposed before mating
-1. The F0 male and his germ cells are exposed.
-2. The F1 develops from an exposed sperm, so it is a directly affected generation.
-3. The germ cells of the F1 form after the exposure has ended.
+Whether such inheritance can produce adaptation is a separate question. Adaptation needs heritable differences in fitness that last long enough for selection to change the composition of a population. A change induced in every exposed individual is a plastic response, and it becomes adaptive only if it is transmitted stably and favoured over the alternative state. In mammals this condition is hard to meet. DNA methylation is erased in primordial germ cells and again after fertilisation, and most sperm histones are replaced by protamines, so a mark must either escape both rounds of erasure or be rebuilt in each generation, for example by small RNAs carried in sperm. Some retrotransposon-derived and imprinted regions do escape erasure in part, and sperm RNAs can alter the phenotype of offspring. Most reported effects nevertheless fade by the F2 or F3, many endocrine-disruptor phenotypes are diseases that lower fitness, and human data such as the Överkalix records are correlational.
 
-The F2 is therefore the first unexposed generation.
-
-## 4. Can such inheritance produce adaptation?
-In principle, yes; in mammals it has not been shown.
-
-1. Requirements. Adaptation requires heritable variation in fitness that persists long enough for selection to change the population. An induced change shared by every exposed individual is a plastic response, not adaptation.
-2. The germline barrier. DNA methylation is erased twice, in primordial germ cells and after fertilisation, and most sperm histones are replaced by protamines. A mark must escape both erasures or be rebuilt in each generation by a carrier such as small RNA.
-3. Mammalian evidence. Some intracisternal A-particle retrotransposons and imprinted regions partly escape erasure, and sperm small RNAs can alter offspring phenotype. Most reported effects, however, fade by the F2 or F3, many endocrine-disruptor phenotypes are diseases that reduce fitness, and human cohort data such as Överkalix are correlational.
-4. Stronger cases outside mammals. In C. elegans, small-RNA-dependent silencing can persist for several generations, and in plants some epialleles remain stable for many generations and segregate like alleles. In these organisms an epigenetic variant could be acted on by selection.
-
-## Conclusion
-The phenotype counts as transgenerational from the F3 after gestational exposure and from the F2 after paternal exposure. Epigenetic inheritance without sequence change can in principle support adaptation where epialleles are stable, as in plants and nematodes, but in mammals the reported effects are too short-lived and too often harmful to demonstrate adaptation.
+The case is stronger outside mammals. In C. elegans, silencing that depends on small RNAs can persist for several generations, and in plants some epialleles stay stable for many generations and segregate much like alleles. In these organisms selection could act on an epigenetic variant without any change in DNA sequence. In mammals, adaptation through this route remains possible in principle but has not been demonstrated.

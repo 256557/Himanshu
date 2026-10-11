@@ -308,3 +308,5 @@ Model A on set 15 (Ne vs N, Fisher's theorem, HW in one generation; 2026-10-11):
 Model A on set 17 (recessive load under outcrossing and selfing, 2026-10-11): CORRECT. L = mu independent of s; first selfed generation L ~ sqrt(mu s)/2 (5.0e-4 and 1.6e-4, matching 5.04e-4 and 1.63e-4); selfing equilibrium q ~ mu/s and L = mu. Population-genetic load questions with standard formulas are not a weakness.
 
 Model A on Q35 (terminal fusion, AB/ab, Ab/aB daughters; 2026-10-11): WRONG, gave 0.0025; correct 0.0270. Two errors: (1) treated 20 cM map distance as r = 0.20 and converted with Haldane (mean 0.51 instead of 0.40); (2) parity method with independent Poisson streams per sister chromatid (2p^3(1-p)). Chromatid-tracking failure count now 14 of 16.
+
+Model A on compensatory mutation Q1 (2026-10-11): PARTLY WRONG. Target-size reason correct; errors: Ile->Asp 'cavity' example, mutational-asymmetry argument, tRNA wording; omits global stabilising suppressors.

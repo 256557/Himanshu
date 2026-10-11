@@ -290,3 +290,5 @@ Model A on the five-question set with Q30 reworded as Q1 (k = 0.9 males, 2026-10
 Model A on the same Q1 (male-only drive, k = 0.9), asked alone (2026-10-11): CORRECT, 1/3. It set adult heterozygotes to 2q, used separate pools (sperm 1.8q, eggs q), took tt = 1.8q^2, solved q^2 - q + 2/9 = 0, rejected q = 2/3 and checked the zygote ratio 1/5 : 8/15 : 4/15. It did not show stability (slope 0.75 at q = 1/3, so stable). The same question failed (0.4) inside the five-question set, so the result is not stable across contexts.
 
 Model A on Q11 (deleterious fixation, s = -0.02, N = 50, h = 0/0.5/1, 2026-10-11): CORRECT on all five values (3.16e-3, 3.77e-4, 3.74e-5, 4.23e-3, 2.31e-3) with correct intermediate integrals. Only flaw: one contradictory sentence in (b) about whether halving p0 contributes to the drop. Standard Kimura diffusion problems are not a weakness.
+
+Model A on set 9 Q1 (recessive lethal, can it fix, N = 20, 2026-10-11): CORRECT, 0. It argued that fixation among adults would require every zygote to be aa, so the adult population would go extinct; loss has probability 1.

@@ -314,3 +314,5 @@ Model A on compensatory mutation Q1 (2026-10-11): PARTLY WRONG. Target-size reas
 Model A on Q36 (central fusion Ab/aB, 2026-10-11): WRONG, 0.06883 = (1-e^-0.8)/8; correct 0.07616. Used fixed-pair independent Poisson(0.1) parities with XOR (swaps do not combine by parity). Chromatid tracking now 15 of 17 failures.
 
 Model A on costly-compensator question (2026-10-11): CORRECT (reciprocal sign epistasis, entrenchment). Minor overclaim on permanent stability.
+
+Model A on Q37 (SDR, Ab/aB, AB/ab eggs; 2026-10-11): WRONG, 0.00873; correct 0.02628. Treated each crossover as involving exactly one of the two sisters independently (valid only in state S), required k1 odd and k2 even >= 2. Chromatid tracking 16 of 18 failures.

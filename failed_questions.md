@@ -296,3 +296,5 @@ Model A on set 9 Q1 (recessive lethal, can it fix, N = 20, 2026-10-11): CORRECT,
 Model A on set 9 Q2 (drive in both sexes, 0.6 eggs / 0.9 sperm, 2026-10-11): CORRECT, 0.3639. Drive questions with explicit sex-specific rates are now reliably solved; only the version buried among essays failed.
 
 Model A on set 9 Q3 (TEI generations and adaptation, 2026-10-11): PARTLY WRONG. Generation thresholds correct (F3 maternal gestational, F2 paternal). Adaptation section overclaims: calls TEI-driven adaptation confirmed, cites Överkalix (correlational) and vinclozolin (not independently reproduced) as proof, uses sperm RNA injection (intergenerational) as transgenerational evidence, offers mitotic histone propagation as a germline mechanism, and equates an induced response with adaptation. Marked Accurate: No.
+
+Model A on set 11 (X-linked F for three first-cousin types, 3/16, 0, 1/8; 2026-10-11): CORRECT on all parts.

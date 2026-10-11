@@ -26,12 +26,12 @@ Genetically identical cells can maintain heritable phenotypic differences whenev
 ### Step 1. Fitness and its age-specific gradients
 Fitness is the growth rate r defined by the Euler-Lotka equation, the sum over ages of e^(-rx) l(x) m(x) = 1, where l(x) is survivorship and m(x) fecundity. Hamilton's gradients, each divided by the generation time T, are:
 1. for fecundity at age x, e^(-rx) l(x);
-2. for survival from age a to a + 1, the sum of e^(-rx) l(x) m(x) over all ages x greater than a.
+2. for the log of survival from age a to a + 1, the sum of e^(-rx) l(x) m(x) over all ages x greater than a.
 
 The survival gradient is constant from birth to the age of first reproduction, then declines, and is zero after the last age of reproduction.
 
 ### Step 2. Condition for spread
-An allele that raises fecundity at an early age alpha by delta_m and lowers the log survival from age beta by delta_s spreads when
+An allele that raises fecundity at an early age alpha by delta_m and lowers the log survival from age beta by delta_s spreads, for small effects, when
 
 e^(-r alpha) l(alpha) delta_m > delta_s x (sum of e^(-rx) l(x) m(x) over x > beta).
 

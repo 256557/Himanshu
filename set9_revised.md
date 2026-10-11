@@ -5,7 +5,7 @@ An autosomal allele a is lethal in homozygotes before reproduction and has no ef
 
 Answer: 0. Loss is certain.
 
-Every adult is AA or Aa, so the adult frequency of a can never exceed 1/2. A population fixed for a would consist only of aa zygotes, and all of them die. In 200,000 simulated populations a was always lost, and its highest adult frequency was 0.475 (`verify/set9.py`).
+Adults are only AA or Aa, so the adult frequency of a stays at or below 1/2. In 200,000 simulated populations a was always lost (`verify/set9.py`).
 Likely wrong answers: 1/40 = 0.025 (neutral fixation probability) or a Kimura diffusion value.
 
 ## Q2
@@ -13,11 +13,13 @@ An autosomal allele t is lethal when homozygous and has no effect in heterozygot
 
 Answer: 0.3639.
 
-With x the adult heterozygote frequency, eggs carry t at 0.6x and sperm at 0.9x, so tt = 0.54x^2 and x' = (1.5x - 1.08x^2)/(1 - 0.54x^2). Equilibrium: 0.54x^2 - 1.08x + 0.5 = 0, so x = 1 - sqrt(1 - 0.5/0.54) = 0.7278, and the allele frequency is x/2 = 0.3639. A polymorphism exists whenever the two transmission rates sum to more than 1.
+With x the adult heterozygote frequency, eggs carry t at 0.6x and sperm at 0.9x, so tt = 0.54x^2.
+
+Selection gives x' = (1.5x - 1.08x^2)/(1 - 0.54x^2). Equilibrium: 0.54x^2 - 1.08x + 0.5 = 0, so x = 1 - sqrt(1 - 0.5/0.54) = 0.7278, and the allele frequency is x/2 = 0.3639. A polymorphism exists whenever the two transmission rates sum to more than 1.
 Likely wrong answer: 0.3333, from averaging the rates.
 
 ## Q3
-A pregnant mouse is exposed to an endocrine disruptor, and an altered phenotype is later seen in her descendants. From which generation can the phenotype be attributed to transgenerational epigenetic inheritance rather than direct exposure, and how does this change if an adult male is exposed before mating instead? Can such inheritance produce adaptation without any change in DNA sequence?
+A pregnant mouse is exposed to an endocrine disruptor, and an altered phenotype is later seen in her descendants. From which generation can the phenotype be attributed to transgenerational epigenetic inheritance rather than direct exposure, and how does this change if an adult male is exposed before mating instead? Can such inheritance produce adaptation with no change in DNA sequence?
 
 Answer outline. The cut-off depends on which germ cells were exposed.
 

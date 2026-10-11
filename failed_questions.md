@@ -274,3 +274,13 @@ Model A on Q30 version with fewer hints (allele frequency only, 2026-10-11): WRO
 Errors: (1) It wrote adult genotype frequencies as p^2/(1 - q^2) and 2pq/(1 - q^2) while defining q as the adult allele frequency. With those frequencies the adult allele frequency is q/(1 + q), not q, so it mixed the zygote and adult allele frequencies. (2) It applied q'' = q_z/(1 + q_z), which assumes zygotes are formed from one gamete pool in Hardy-Weinberg proportions (tt = q_z^2). Here eggs and sperm differ (q_egg vs q_sperm), so tt = q_egg x q_sperm, not q_z^2. Both shortcuts come from the single-sex recessive-lethal formula and do not apply with sex-specific drive.
 
 Model A on Q33 (hint-free sex-specific drive, 2026-10-11): CORRECT, 0.3700. It tracked sperm and egg frequencies separately, wrote correct recursions q_m' = 0.8(q_m + q_f - 2q_m q_f)/(1 - q_m q_f) and q_f' = 0.5(q_m + q_f - q_m q_f)/(1 - 0.5 q_m q_f), and found the closed form q_f* = 1 - 4^(-1/3) = 0.370039, which matches the iterated equilibrium to six decimals.
+
+Model A on Q34 (female-limited drive, recessive lethal, 2026-10-11): CORRECT, 0.2113. Together with Q33, this means the sex-specific drive trap no longer works once the model sees two gamete pools; it fails only when the cue is weak (Q30 short version).
+
+## Q35 (terminal fusion, coupling parent, repulsion daughter) [0.0270]
+Verified: closed form 0.026964; simulation of 8M meioses 0.02693 +- 0.00006 (`verify/q35.py`).
+
+A parthenogenetic insect reproduces by terminal fusion, so each daughter keeps two sister chromatids. Genes A and B are on the same chromosome arm. A is 20 cM (map distance) from the centromere, and B is 20 cM beyond A. Crossovers are Poisson, with no chiasma or chromatid interference, and each crossover joins a chromatid of one homolog with a chromatid of the other. The mother is AB/ab. What fraction of her daughters are Ab/aB? Give four decimal places.
+
+Answer: 0.0270 = (2/3)(1 - e^(-0.6)) x (2/3 + e^(-0.6)/3 - e^(-0.4))/2.
+Likely wrong answers: 0.0075 (parity method), 0.1278 (half of all double heterozygotes, ignoring phase memory), 0.2286 (coupling instead of repulsion), 0.2556 (all double heterozygotes).

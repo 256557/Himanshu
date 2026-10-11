@@ -42,7 +42,9 @@ e^(-r alpha) l(alpha) delta_m > delta_s x (sum of e^(-rx) l(x) m(x) over x > bet
 4. The two effects cannot be separated by recombination or modifier loci, because they come from one gene product.
 
 ### Step 4. The role of extrinsic mortality
-Raising an age-independent hazard by mu multiplies l(x) by e^(-mu x), and the Euler-Lotka equation then lowers r by exactly mu. The product e^(-rx) l(x) is unchanged, so both gradients and the condition in Step 2 stay the same. A numerical check confirms this (`verify/ap_extrinsic.py`). Extrinsic mortality favours such alleles only when it rises with age, or when population regulation acts on particular ages, for example on juvenile survival.
+In a population growing without density regulation, raising an age-independent hazard by mu multiplies l(x) by e^(-mu x), and the Euler-Lotka equation then lowers r by exactly mu. The product e^(-rx) l(x) is unchanged, so both gradients and the condition in Step 2 stay the same. The result changes when density dependence holds the population stationary through fecundity or juvenile survival. Then r stays at 0, the factor e^(-mu x) remains in the gradients, and selection on late ages weakens, so the early-benefit allele is favoured more easily.
+
+Extrinsic mortality therefore matters only when it varies with age or when population regulation acts through fecundity or particular ages rather than through an equal hazard at all ages (`verify/ap_extrinsic.py`, `verify/ap_density.py`).
 
 ### Conclusion
-An early-benefit, late-cost allele spreads when its fecundity gain, weighted by e^(-r alpha) l(alpha), exceeds its survival cost weighted by the reproduction remaining after the cost begins. This is easiest when the cost falls late in or after the reproductive span, when reproduction is concentrated early and when the population is growing; a constant extrinsic hazard alone does not change the outcome.
+An early-benefit, late-cost allele spreads when its fecundity gain, weighted by e^(-r alpha) l(alpha), exceeds its survival cost weighted by the reproduction remaining after the cost begins. This is easiest when the cost falls late in or after the reproductive span, when reproduction is concentrated early and when the population is growing; a constant extrinsic hazard changes the outcome only through the way the population is regulated.

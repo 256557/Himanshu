@@ -257,3 +257,13 @@ Key false claim: "each crossover event in any region involves exactly one of {c1
 In Neurospora crassa, genes A and B lie on the same arm. A is 12 cM (map distance) from the centromere, and B is 18 cM beyond A. Crossovers are Poisson, with no chiasma or chromatid interference, and each crossover joins a chromatid of one homolog with a chromatid of the other. Among ordered asci showing first-division segregation for A, what fraction show second-division segregation for B? Give four decimal places.
 Answer: 0.2782 = (2/3)(1 - e^(-0.54)). Simulation of 6M meioses agrees (`verify/` material model). Parity method (wrong) gives 0.2566.
 Solution: FDS at A means the two sister chromatids on each centromere are identical at A (state S). From S each crossover gives D; from D a crossover gives S with chance 1/2. With m = 2 x 0.18 = 0.36, P(D at B | S at A) = (2/3)(1 - e^(-3m/2)) = (2/3)(0.417252) = 0.278168. The centromere distance does not matter.
+
+## Q30 (meiotic drive in males only, recessive lethal) [2/3, 1/3, 1/5]
+Built from Model A's error on the essay question (it reported the heterozygote frequency (2k-1)/(ks) as the allele frequency).
+Verified by iterating the recursion to equilibrium (`verify/q30.py`).
+
+An autosomal allele t is lethal when homozygous (tt dies before reproduction) and has no effect in heterozygotes. Heterozygous males transmit t to 90% of their sperm; heterozygous females transmit it to 50% of their eggs. Mating is random, the population is very large, and there is no mutation. At the stable polymorphic equilibrium, find (a) the frequency of heterozygotes among adults, (b) the frequency of t among adults, and (c) the fraction of zygotes that die. Give exact values.
+
+Answer: (a) 2/3, (b) 1/3, (c) 1/5.
+Solution: Let x be the adult heterozygote frequency (the same in both sexes). Eggs carry t with frequency x/2 and sperm with frequency kx, where k = 0.9. Zygotes: tt = (x/2)(kx) = kx^2/2; heterozygotes = x(1/2 + k) - kx^2. Survivors: x' = [x(1/2 + k) - kx^2]/(1 - kx^2/2). At equilibrium (x not 0): x^2 - 2x + (2k - 1)/k = 0, so x = 1 - sqrt((1 - k)/k) = 1 - 1/3 = 2/3. The adult allele frequency is x/2 = 1/3, and the zygote death fraction is kx^2/2 = 0.9 x (4/9)/2 = 1/5.
+Likely wrong answers: 8/9 and 4/9 (the symmetric formulas (2k - 1)/k and (2k - 1)/(2k), which assume drive in both sexes); reporting x = 2/3 as the allele frequency; 0.467 (zygote allele frequency given as adult frequency).

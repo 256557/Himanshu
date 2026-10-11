@@ -292,3 +292,5 @@ Model A on the same Q1 (male-only drive, k = 0.9), asked alone (2026-10-11): COR
 Model A on Q11 (deleterious fixation, s = -0.02, N = 50, h = 0/0.5/1, 2026-10-11): CORRECT on all five values (3.16e-3, 3.77e-4, 3.74e-5, 4.23e-3, 2.31e-3) with correct intermediate integrals. Only flaw: one contradictory sentence in (b) about whether halving p0 contributes to the drop. Standard Kimura diffusion problems are not a weakness.
 
 Model A on set 9 Q1 (recessive lethal, can it fix, N = 20, 2026-10-11): CORRECT, 0. It argued that fixation among adults would require every zygote to be aa, so the adult population would go extinct; loss has probability 1.
+
+Model A on set 9 Q2 (drive in both sexes, 0.6 eggs / 0.9 sperm, 2026-10-11): CORRECT, 0.3639. Drive questions with explicit sex-specific rates are now reliably solved; only the version buried among essays failed.

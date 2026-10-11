@@ -304,3 +304,5 @@ Model A on epigenetic divergence + antagonistic pleiotropy essays (2026-10-11): 
 Model A on set 14 (extrinsic mortality, density-independent vs fecundity-regulated, 2026-10-11): CORRECT (No / Yes) with a valid derivative proof. Minor: says lower r "increases the time discount" (reversed), and overgeneralises the conclusion to all density regulation.
 
 Model A on set 15 (Ne vs N, Fisher's theorem, HW in one generation; 2026-10-11): traps passed (noted Ne > N for Vk < 2, Fisher = partial change, needs p_m = p_f). Error: calls p_m = p_f "necessary and sufficient", but the condition is on gametes; male drive with equal adult frequencies breaks HW (`verify/set15_hw_drive.py`: offspring AA 0.1404 vs HW 0.1475). Minor: "harmonic mean scaled by 4", mutation placed in the fitness-change term.
+
+Model A on set 17 (recessive load under outcrossing and selfing, 2026-10-11): CORRECT. L = mu independent of s; first selfed generation L ~ sqrt(mu s)/2 (5.0e-4 and 1.6e-4, matching 5.04e-4 and 1.63e-4); selfing equilibrium q ~ mu/s and L = mu. Population-genetic load questions with standard formulas are not a weakness.

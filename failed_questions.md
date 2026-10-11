@@ -294,3 +294,5 @@ Model A on Q11 (deleterious fixation, s = -0.02, N = 50, h = 0/0.5/1, 2026-10-11
 Model A on set 9 Q1 (recessive lethal, can it fix, N = 20, 2026-10-11): CORRECT, 0. It argued that fixation among adults would require every zygote to be aa, so the adult population would go extinct; loss has probability 1.
 
 Model A on set 9 Q2 (drive in both sexes, 0.6 eggs / 0.9 sperm, 2026-10-11): CORRECT, 0.3639. Drive questions with explicit sex-specific rates are now reliably solved; only the version buried among essays failed.
+
+Model A on set 9 Q3 (TEI generations and adaptation, 2026-10-11): PARTLY WRONG. Generation thresholds correct (F3 maternal gestational, F2 paternal). Adaptation section overclaims: calls TEI-driven adaptation confirmed, cites Överkalix (correlational) and vinclozolin (not independently reproduced) as proof, uses sperm RNA injection (intergenerational) as transgenerational evidence, offers mitotic histone propagation as a germline mechanism, and equates an induced response with adaptation. Marked Accurate: No.

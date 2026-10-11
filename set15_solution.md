@@ -26,6 +26,10 @@ Self-fertilisation lowers Ne to about N/(1 + F), where F is the inbreeding coeff
 
 Overlapping generations and subdivision with limited migration also alter Ne, and subdivision can raise the effective size of the whole population above the summed census size of its demes when migration is low.
 
+### Answer
+
+Fluctuating size, an unequal sex ratio, offspring variance above the Poisson value and selfing lower Ne below N; offspring variance below the Poisson value and some forms of subdivision raise it above N.
+
 ## Question 2. Fisher's fundamental theorem
 
 ### Step 1. What the theorem states
@@ -78,4 +82,4 @@ X-linked loci with unequal frequencies in the sexes approach equilibrium with da
 
 ### Answer
 
-One generation suffices when the male and female gamete pools carry the allele at the same frequency, which requires equal adult frequencies in the two sexes, Mendelian segregation, no gametic selection, random mating and a large population.
+One generation suffices when the male and female gamete pools carry the allele at the same frequency, which in practice requires equal adult frequencies in the two sexes, Mendelian segregation, no gametic selection, random mating and a large population.

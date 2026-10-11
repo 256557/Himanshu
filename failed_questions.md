@@ -286,3 +286,5 @@ Answer: 0.0270 = (2/3)(1 - e^(-0.6)) x (2/3 + e^(-0.6)/3 - e^(-0.4))/2.
 Likely wrong answers: 0.0075 (parity method), 0.1278 (half of all double heterozygotes, ignoring phase memory), 0.2286 (coupling instead of repulsion), 0.2556 (all double heterozygotes).
 
 Model A on the five-question set with Q30 reworded as Q1 (k = 0.9 males, 2026-10-11): WRONG, gave 0.4; correct 1/3. It averaged egg and sperm pools and squared the mean (q' = 1.4q/(1 + q)). Essays Q3-Q5 had factual errors; details in `essay_set3_grading.md`.
+
+Model A on the same Q1 (male-only drive, k = 0.9), asked alone (2026-10-11): CORRECT, 1/3. It set adult heterozygotes to 2q, used separate pools (sperm 1.8q, eggs q), took tt = 1.8q^2, solved q^2 - q + 2/9 = 0, rejected q = 2/3 and checked the zygote ratio 1/5 : 8/15 : 4/15. It did not show stability (slope 0.25 at q = 1/3). The same question failed (0.4) inside the five-question set, so the result is not stable across contexts.

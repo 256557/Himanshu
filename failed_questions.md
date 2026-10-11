@@ -300,3 +300,5 @@ Model A on set 9 Q3 (TEI generations and adaptation, 2026-10-11): PARTLY WRONG. 
 Model A on set 11 (X-linked F for three first-cousin types, 3/16, 0, 1/8; 2026-10-11): CORRECT on all parts.
 
 Model A on epigenetic divergence + antagonistic pleiotropy essays (2026-10-11): WRONG on Q2. Survival gradient missing l(u); extra discount in cost term; claims age-independent extrinsic mortality is the key condition (it leaves Hamilton's gradients unchanged, `verify/ap_extrinsic.py`); diagrams show survival gradient declining from birth and non-zero after last reproduction. Q1 minor errors (unit mix in k_switch, EZH2 vs EED) and omits non-chromatin bistability. Details in `set13_grading.md`.
+
+Model A on set 14 (extrinsic mortality, density-independent vs fecundity-regulated, 2026-10-11): CORRECT (No / Yes) with a valid derivative proof. Minor: says lower r "increases the time discount" (reversed), and overgeneralises the conclusion to all density regulation.

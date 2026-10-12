@@ -23,4 +23,4 @@ A carrier transmits the allele to a son with probability 1/2, so the risk is 1/6
 The exact fractions are checked in `verify/q41.py`.
 
 ## Likely wrong answers
-0.1667 (ignoring the unaffected brothers); 0.2500 (assuming the mother is certainly a carrier); 0.1250 (using 1/2 as the prior for the mother).
+0.1667 (ignoring the unaffected brothers); 0.2500 (assuming the mother is certainly a carrier); 0.0500 (using 1/2 as the prior for the mother).

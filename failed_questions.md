@@ -320,3 +320,5 @@ Model A on Q37 (SDR, Ab/aB, AB/ab eggs; 2026-10-11): WRONG, 0.00873; correct 0.0
 Model A on Q38 (granddaughter heterozygosity, mixed fusion; 2026-10-12): WRONG, 0.4706 vs 0.4692. Used m = 0.20 instead of 0.40 and parity formulas (central (1+e^-m)/2 = 0.9094, terminal (1-e^-2m)/2 = 0.1648); errors nearly cancel. Recurrence correct. Chromatid tracking 17 of 19.
 
 Model A on set 18 Q6 (yeast NPD, 30 cM; 2026-10-12): CORRECT, 0.0278. Tetrad questions remain a strength.
+
+Model A on set 19 (bottleneck and VA; 2026-10-12): PARTLY WRONG. Concept right; formula second-order only but called exact at p=1/2 (exact 0.422 vs 0.500 for Nb=2); V_D > V_A/2 condition stated generally while dropping (q-p) cross term (q=0.1 recessive: exact 0.0547 vs formula 0.0216); epistasis term inconsistent (VAA/Nb vs F VAA). verify/set19_check_modelA.py

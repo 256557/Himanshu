@@ -330,3 +330,5 @@ Model A on Q41 (isolated DMD case; 2026-10-12): WRONG, 3/28 = 0.1071; correct 1/
 Model A on Q42 (male-biased mutation, isolated X-linked case; 2026-10-12): WRONG, 3/16 = 0.1875; correct 11/60 = 0.1833. Pooled male and female X into q = 2ue + us and used 2q as carrier frequency (24ue instead of 22ue). Same systematic error as Q41.
 
 Model A on Q43 (egg-biased, four unaffected brothers; 2026-10-12): CORRECT, 11/684 = 0.0161. Used female allele frequency correctly this time.
+
+Model A on Q44 (three-generation X-linked; 2026-10-12): CORRECT, 5/148 = 0.0338. X-linked Bayesian priors now solved when female frequency is used; Q41/Q42 failures came from pooling.

@@ -322,3 +322,5 @@ Model A on Q38 (granddaughter heterozygosity, mixed fusion; 2026-10-12): WRONG, 
 Model A on set 18 Q6 (yeast NPD, 30 cM; 2026-10-12): CORRECT, 0.0278. Tetrad questions remain a strength.
 
 Model A on set 19 (bottleneck and VA; 2026-10-12): PARTLY WRONG. Concept right; formula second-order only but called exact at p=1/2 (exact 0.422 vs 0.500 for Nb=2); V_D > V_A/2 condition stated generally while dropping (q-p) cross term (q=0.1 recessive: exact 0.0547 vs formula 0.0216); epistasis term inconsistent (VAA/Nb vs F VAA). verify/set19_check_modelA.py
+
+Model A on Q40 (penetrance Bayesian; 2026-10-12): CORRECT, 0.0269.

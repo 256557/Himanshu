@@ -1,0 +1,9 @@
+from fractions import Fraction as F
+# Haldane: X-linked recessive lethal, equal mutation rates, mutation-selection equilibrium.
+# P(mother carrier | one affected son, no family history) = 2/3 (standard result; derived below).
+mu=F(1,10**6); carrier_freq=4*mu
+pc=carrier_freq*F(1,2); pn=(1-carrier_freq)*mu   # prob affected son via carrier mother vs new mutation in egg
+prior=pc/(pc+pn); print("P(mother carrier | isolated case) ~",float(prior))
+prior=F(2,3); post=prior*F(1,4)/(prior*F(1,4)+(1-prior))
+print("after two unaffected sons",post," sister carrier",post/2," sister's son affected",post/4,float(post/4))
+print("ignoring brothers:",prior/4)

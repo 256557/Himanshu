@@ -328,3 +328,5 @@ Model A on Q40 (penetrance Bayesian; 2026-10-12): CORRECT, 0.0269.
 Model A on Q41 (isolated DMD case; 2026-10-12): WRONG, 3/28 = 0.1071; correct 1/12 = 0.0833. Used carrier frequency 6u (took 3u as female allele frequency); correct 4u.
 
 Model A on Q42 (male-biased mutation, isolated X-linked case; 2026-10-12): WRONG, 3/16 = 0.1875; correct 11/60 = 0.1833. Pooled male and female X into q = 2ue + us and used 2q as carrier frequency (24ue instead of 22ue). Same systematic error as Q41.
+
+Model A on Q43 (egg-biased, four unaffected brothers; 2026-10-12): CORRECT, 11/684 = 0.0161. Used female allele frequency correctly this time.

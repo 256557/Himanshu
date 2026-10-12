@@ -316,3 +316,5 @@ Model A on Q36 (central fusion Ab/aB, 2026-10-11): WRONG, 0.06883 = (1-e^-0.8)/8
 Model A on costly-compensator question (2026-10-11): CORRECT (reciprocal sign epistasis, entrenchment). Minor overclaim on permanent stability.
 
 Model A on Q37 (SDR, Ab/aB, AB/ab eggs; 2026-10-11): WRONG, 0.00873; correct 0.02628. Treated each crossover as involving exactly one of the two sisters independently (valid only in state S), required k1 odd and k2 even >= 2. Chromatid tracking 16 of 18 failures.
+
+Model A on Q38 (granddaughter heterozygosity, mixed fusion; 2026-10-12): WRONG, 0.4706 vs 0.4692. Used m = 0.20 instead of 0.40 and parity formulas (central (1+e^-m)/2 = 0.9094, terminal (1-e^-2m)/2 = 0.1648); errors nearly cancel. Recurrence correct. Chromatid tracking 17 of 19.
